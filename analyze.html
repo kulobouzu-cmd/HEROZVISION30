@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>志の読み解き｜HEROZ VISION</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--midnight:#0D1B2A;--burgundy:#6B1A2A;--burgundy2:#8B2438;--burgundy-l:#B03050;--gold:#C9A84C;--off-white:#FAFAF8;--warm-white:#F7F4EF;--warm-gray:#EEE9E2;--ink:#1A1A1A;--ink-light:#7A736A;--cream:#F5F0E8;--success:#2D7D4F;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;background:var(--off-white);color:var(--ink);-webkit-font-smoothing:antialiased;min-height:100vh;}
+.header{background:var(--midnight);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;}
+.header-logo{font-size:9px;letter-spacing:5px;color:rgba(201,168,76,.5);font-weight:300;}
+.header-title{font-size:12px;color:rgba(245,240,232,.4);letter-spacing:2px;}
+.main{max-width:720px;margin:0 auto;padding:48px 24px 120px;}
+.page-header{margin-bottom:48px;}
+.page-eyebrow{font-size:9px;letter-spacing:5px;color:var(--burgundy);font-weight:500;margin-bottom:12px;}
+.page-title{font-family:'游明朝','Yu Mincho','Noto Serif JP',serif;font-size:28px;font-weight:700;color:var(--midnight);line-height:1.6;margin-bottom:8px;}
+.page-sub{font-size:13px;color:var(--ink-light);line-height:1.9;}
+.api-section{background:#fff;border:1px solid rgba(26,26,26,.1);border-radius:12px;padding:24px;margin-bottom:32px;}
+.api-label{font-size:10px;letter-spacing:3px;color:var(--ink-light);margin-bottom:10px;font-weight:500;}
+.api-row{display:flex;gap:10px;align-items:center;}
+.api-input{flex:1;padding:12px 16px;border:1px solid rgba(26,26,26,.12);border-radius:8px;font-size:13px;font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;color:var(--ink);background:var(--warm-white);outline:none;transition:border-color .2s;}
+.api-input:focus{border-color:var(--burgundy);}
+.api-save-btn{padding:12px 20px;background:var(--midnight);color:var(--cream);border:none;border-radius:8px;font-size:12px;font-weight:500;cursor:pointer;white-space:nowrap;transition:background .2s;font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;}
+.api-save-btn:hover{background:var(--burgundy);}
+.api-status{font-size:11px;margin-top:8px;color:var(--ink-light);}
+.api-status.ok{color:var(--success);}
+.api-status.err{color:var(--burgundy);}
+.card{background:#fff;border:1px solid rgba(26,26,26,.1);border-radius:12px;margin-bottom:20px;overflow:hidden;}
+.card-head{padding:18px 24px;border-bottom:1px solid rgba(26,26,26,.07);display:flex;align-items:center;justify-content:space-between;}
+.card-title{font-family:'游明朝','Yu Mincho','Noto Serif JP',serif;font-size:15px;font-weight:700;color:var(--midnight);}
+.card-badge{font-size:9px;letter-spacing:2px;background:var(--burgundy);color:var(--cream);padding:4px 10px;border-radius:2px;}
+.card-body{padding:24px;}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.info-field label{font-size:10px;letter-spacing:2px;color:var(--ink-light);display:block;margin-bottom:6px;font-weight:500;}
+.info-field input,.info-field select{width:100%;padding:10px 14px;border:1px solid rgba(26,26,26,.12);border-radius:8px;font-size:13px;font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;color:var(--ink);background:var(--warm-white);outline:none;transition:border-color .2s;}
+.info-field input:focus,.info-field select:focus{border-color:var(--burgundy);}
+.q-block{margin-bottom:20px;}
+.q-label{font-size:12px;color:var(--midnight);font-weight:700;margin-bottom:8px;line-height:1.6;}
+.q-hint{font-size:11px;color:var(--ink-light);margin-bottom:10px;line-height:1.7;}
+.q-textarea{width:100%;padding:12px 14px;border:1px solid rgba(26,26,26,.12);border-radius:8px;font-size:13px;font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;color:var(--ink);background:var(--warm-white);outline:none;resize:vertical;min-height:280px;line-height:1.9;transition:border-color .2s;}
+.q-textarea:focus{border-color:var(--burgundy);}
+.q-textarea-sm{min-height:120px;}
+.section-divider{margin:28px 0 20px;padding-bottom:10px;border-bottom:2px solid rgba(107,26,42,.12);}
+.section-divider-title{font-family:'游明朝','Yu Mincho','Noto Serif JP',serif;font-size:13px;font-weight:700;color:var(--burgundy);letter-spacing:2px;}
+.analyze-wrap{text-align:center;margin:40px 0;}
+.analyze-btn{display:inline-flex;align-items:center;gap:12px;background:var(--burgundy);color:var(--cream);border:none;border-radius:4px;padding:20px 56px;font-size:15px;font-weight:700;font-family:'游明朝','Yu Mincho','Noto Serif JP',serif;cursor:pointer;letter-spacing:2px;transition:all .3s;}
+.analyze-btn:hover{background:var(--burgundy2);transform:translateY(-2px);box-shadow:0 12px 40px rgba(107,26,42,.35);}
+.analyze-btn:disabled{background:rgba(26,26,26,.2);cursor:not-allowed;transform:none;box-shadow:none;}
+.analyze-note{font-size:12px;color:var(--ink-light);margin-top:12px;}
+.loading{display:none;text-align:center;padding:48px;}
+.loading.show{display:block;}
+.loading-ring{width:48px;height:48px;border:3px solid rgba(107,26,42,.15);border-top-color:var(--burgundy);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 16px;}
+.loading-text{font-size:13px;color:var(--ink-light);}
+@keyframes spin{to{transform:rotate(360deg);}}
+.result{display:none;margin-top:40px;}
+.result.show{display:block;}
+.result-header{background:var(--midnight);padding:28px 32px;border-radius:12px 12px 0 0;display:flex;align-items:center;justify-content:space-between;}
+.result-title{font-family:'游明朝','Yu Mincho','Noto Serif JP',serif;font-size:18px;font-weight:700;color:var(--cream);}
+.result-name{font-size:12px;color:rgba(245,240,232,.4);letter-spacing:1px;}
+.result-body{background:#fff;border:1px solid rgba(26,26,26,.08);border-top:none;border-radius:0 0 12px 12px;padding:32px;}
+.result-text{font-size:14px;line-height:2.2;color:#3A3530;white-space:pre-wrap;width:100%;min-height:320px;border:1.5px solid rgba(107,26,42,.2);border-radius:8px;padding:16px;font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;resize:vertical;outline:none;background:#FDFCFA;transition:border-color .2s;}
+.result-text:focus{border-color:var(--burgundy);}
+.result-actions{display:flex;gap:12px;margin-top:24px;padding-top:24px;border-top:1px solid rgba(26,26,26,.08);flex-wrap:wrap;}
+.action-btn{padding:12px 24px;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer;font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;transition:all .2s;}
+.btn-pdf{background:var(--burgundy);color:var(--cream);border:none;}
+.btn-pdf:hover{background:var(--burgundy2);}
+.btn-copy{background:var(--midnight);color:var(--cream);border:none;}
+.btn-copy:hover{background:var(--burgundy);}
+.btn-new{background:transparent;color:var(--ink-light);border:1px solid rgba(26,26,26,.12);}
+.btn-new:hover{border-color:var(--midnight);color:var(--midnight);}
+#qr-hidden{position:absolute;left:-9999px;top:-9999px;}
+
+/* ── 印刷用志の原稿テンプレート ── */
+#pdf-template{display:none;}
+@media print{
+  body > *:not(#pdf-template){display:none!important;}
+  #pdf-template{display:block!important;}
+  @page{size:A4;margin:0;}
+}
+.pdf-wrap{width:210mm;min-height:297mm;background:#FAFAF8;font-family:'游明朝','Yu Mincho','Noto Serif JP',serif;position:relative;box-sizing:border-box;}
+.pdf-header{background:#0D1B2A;padding:0;display:flex;height:52mm;position:relative;overflow:hidden;}
+.pdf-header-accent{width:6mm;background:#6B1A2A;flex-shrink:0;}
+.pdf-header-content{padding:10mm 14mm;flex:1;display:flex;flex-direction:column;justify-content:space-between;}
+.pdf-logo{font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;font-size:8pt;letter-spacing:5px;color:rgba(201,168,76,.6);font-weight:300;}
+.pdf-main-title{font-size:32pt;font-weight:700;color:#F5F0E8;line-height:1.1;margin:2mm 0;}
+.pdf-sub-title{font-size:9pt;color:rgba(201,168,76,.5);letter-spacing:2px;font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;font-weight:300;}
+.pdf-header-deco{position:absolute;right:10mm;bottom:8mm;font-size:72pt;font-weight:900;color:rgba(255,255,255,.04);font-family:'游明朝','Yu Mincho',serif;line-height:1;}
+.pdf-client-bar{background:#EEE9E2;padding:4mm 20mm;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(107,26,42,.15);}
+.pdf-client-name{font-size:13pt;font-weight:700;color:#0D1B2A;}
+.pdf-client-meta{font-size:8pt;color:#7A736A;font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;text-align:right;line-height:1.8;}
+.pdf-body{padding:10mm 20mm 8mm;}
+.pdf-section{margin-bottom:8mm;}
+.pdf-section-header{display:flex;align-items:center;gap:3mm;margin-bottom:3mm;}
+.pdf-section-bar{width:3mm;height:14pt;background:#6B1A2A;flex-shrink:0;border-radius:1px;}
+.pdf-section-title{font-size:11pt;font-weight:700;color:#6B1A2A;letter-spacing:1px;}
+.pdf-section-body{font-size:9.5pt;color:#3A3530;line-height:2.1;padding-left:6mm;font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;white-space:pre-wrap;}
+.pdf-divider{height:1px;background:rgba(107,26,42,.1);margin:6mm 0;}
+.pdf-next{background:#F7F2EA;border:1.5px solid #6B1A2A;border-radius:3mm;padding:5mm 6mm;margin:6mm 0 8mm;display:flex;gap:5mm;align-items:flex-start;}
+.pdf-next-badge{background:#6B1A2A;color:#F5F0E8;font-size:7pt;padding:2mm 4mm;border-radius:2mm;white-space:nowrap;font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;font-weight:700;letter-spacing:1px;flex-shrink:0;}
+.pdf-next-content{}
+.pdf-next-title{font-size:10pt;font-weight:700;color:#6B1A2A;margin-bottom:2mm;}
+.pdf-next-body{font-size:8.5pt;color:#4A4540;line-height:1.9;font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;}
+.pdf-next-url{font-size:7.5pt;color:#7A736A;margin-top:2mm;font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;}
+.pdf-footer{background:#0D1B2A;padding:4mm 20mm;display:flex;align-items:center;justify-content:space-between;position:absolute;bottom:0;left:0;right:0;}
+.pdf-footer-left{display:flex;align-items:center;gap:3mm;}
+.pdf-footer-accent{width:3mm;height:10pt;background:#6B1A2A;border-radius:1px;}
+.pdf-footer-logo{font-size:7pt;letter-spacing:4px;color:rgba(245,240,232,.25);font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;}
+.pdf-footer-copy{font-size:7pt;color:rgba(245,240,232,.15);font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;}
+</style>
+</head>
+<body>
+
+
+<div class="auth-overlay" id="auth-overlay">
+  <div class="auth-box">
+    <div class="auth-logo">H E R O Z &nbsp; V I S I O N</div>
+    <div class="auth-title">志の読み解き</div>
+    <div class="auth-sub">パスワードを入力してください</div>
+    <input type="password" class="auth-input" id="auth-input" placeholder="••••••••" onkeydown="if(event.key==='Enter')checkAuth()">
+    <button class="auth-btn" onclick="checkAuth()">入 室</button>
+    <div class="auth-err" id="auth-err">パスワードが正しくありません</div>
+  </div>
+</div>
+
+<div class="header">
+  <div class="header-logo">H E R O Z &nbsp; V I S I O N</div>
+  <div class="header-title">志 の 読 み 解 き</div>
+</div>
+
+<div class="main">
+  <div class="page-header">
+    <div class="page-eyebrow">AI ANALYSIS · 志言語化</div>
+    <div class="page-title">アンケート回答を<br>志の言葉に変える</div>
+    <div class="page-sub">クライアントの回答を貼り付けて「志を読み解く」を押してください。AIが志の原稿素材を生成します。</div>
+  </div>
+
+  <div class="api-section">
+    <div class="api-label">A P I &nbsp; K E Y</div>
+    <div class="api-row">
+      <input type="password" class="api-input" id="api-key" placeholder="sk-ant-api03-..." autocomplete="off">
+      <button class="api-save-btn" onclick="saveKey()">保存</button>
+    </div>
+    <div class="api-status" id="api-status">APIキーを入力して保存してください</div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <div class="card-title">クライアント情報</div>
+      <div class="card-badge">BASIC INFO</div>
+    </div>
+    <div class="card-body">
+      <div class="info-field">
+          <label>お名前</label>
+          <input type="text" id="client-name" placeholder="山田 太郎" style="max-width:280px;">
+        </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <div class="card-title">アンケート回答</div>
+      <div class="card-badge">一括貼り付け</div>
+    </div>
+    <div class="card-body">
+      <div class="q-block">
+        <div class="q-label">回答を貼り付けてください</div>
+        <div class="q-hint">Googleフォームの回答スプレッドシートを開く → 対象クライアントの行を全選択 → コピー（Ctrl+C）→ 下の欄に貼り付け（Ctrl+V）</div>
+        <textarea class="q-textarea" id="answers-bulk" placeholder="ここにスプレッドシートからコピーした回答を貼り付けてください...&#10;&#10;（質問と回答がセットで貼り付けられていれば、AIが自動で読み取ります）"></textarea>
+      </div>
+      <div class="section-divider"><div class="section-divider-title">セッションメモ（任意）</div></div>
+      <div class="q-block" style="margin-bottom:0;">
+        <div class="q-label">セッション中の重要なキーワード・エピソード・気になった言葉など</div>
+        <textarea class="q-textarea q-textarea-sm" id="session-extra" placeholder="例：「子供の頃から人の話を聞くのが好きだった」という発言が印象的。涙ぐむ場面あり。キーワード：つながり・居場所・安心感..."></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="analyze-wrap">
+    <button class="analyze-btn" id="analyze-btn" onclick="analyze()">志を読み解く →</button>
+    <div class="analyze-note">AIが回答を分析し、志の原稿素材を生成します（30秒〜1分）</div>
+  </div>
+
+  <div class="loading" id="loading">
+    <div class="loading-ring"></div>
+    <div class="loading-text">志の言葉を紡いでいます...</div>
+  </div>
+
+  <div class="result" id="result">
+    <div class="result-header">
+      <div class="result-title">志の原稿　素材</div>
+      <div class="result-name" id="result-name"></div>
+    </div>
+    <div class="result-body">
+      <div style="font-size:10px;color:var(--ink-light);letter-spacing:2px;margin-bottom:8px;">✏️  直接編集できます</div>
+      <textarea class="result-text" id="result-text" spellcheck="false"></textarea>
+      <div class="result-actions">
+        <button class="action-btn btn-pdf" onclick="openPDF()">📄 志の原稿PDFを作成</button>
+        <button class="action-btn btn-copy" onclick="copyResult()">テキストをコピー</button>
+        <button class="action-btn btn-new" onclick="resetForm()">新しいクライアント</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const SYSTEM_PROMPT = `あなたはHEROZ VISIONの志言語化セッションをサポートするAIです。
+谷川哲也（マスターバインド）の志命：縁ある人の志を見出し、愛の世界へ導き、人生の主人公として目覚めさせること。
+
+クライアントのアンケート回答をもとに、以下の4項目で「志の原稿」の素材を生成してください。
+
+【出力形式】
+
+■ 固有の能力
+（原体験・強み・自然にできることから、その人だけの能力を3〜5つ、具体的な言葉で）
+
+■ 動機の源泉
+（何がその人を突き動かすのか。感情・価値観・信念の核心を3〜5文で）
+
+■ 志の輪郭
+（その人の志の方向性・本質的なテーマを、詩的かつ具体的な言葉で150〜200字）
+
+■ 志命の原稿（候補）
+（この回答から浮かぶ志命の候補を3〜5個。読み方・由来も添える）
+
+---
+注意事項：
+・美辞麗句ではなく、回答の言葉に根拠を持たせる
+・「〜な人」ではなく「〜できる人」「〜する人」という能動的な表現を使う
+・志命の候補は表記・文字数・読み方すべて自由（漢字・ひらがな・カタカナ・英語・組み合わせ）
+・セッションメモがあれば優先的に参照する`;
+
+
+function checkAuth() {
+  const pw = document.getElementById('auth-input').value;
+  if (pw === 'Ln6UaI9e') {
+    document.getElementById('auth-overlay').style.display = 'none';
+    document.getElementById('auth-input').value = '';
+  } else {
+    document.getElementById('auth-err').classList.add('show');
+    document.getElementById('auth-input').value = '';
+    document.getElementById('auth-input').focus();
+  }
+}
+// ページ読み込み時に認証画面を表示
+window.addEventListener('load', function() {
+  document.getElementById('auth-overlay').style.display = 'flex';
+});
+
+let apiKey = '';
+let currentResult = '';
+let currentName = '';
+let currentSession = '';
+
+function saveKey() {
+  const val = document.getElementById('api-key').value.trim();
+  if (!val.startsWith('sk-ant-')) {
+    setStatus('err', 'APIキーの形式が正しくありません（sk-ant-で始まる文字列）');
+    return;
+  }
+  apiKey = val;
+  setStatus('ok', '✓ APIキーを設定しました');
+}
+
+function setStatus(type, msg) {
+  const el = document.getElementById('api-status');
+  el.textContent = msg;
+  el.className = 'api-status ' + type;
+}
+
+function getAnswers() {
+  const bulk = document.getElementById('answers-bulk').value.trim();
+  const extra = document.getElementById('session-extra').value.trim();
+  let text = '';
+  if (bulk) text += '【アンケート回答】\n' + bulk + '\n\n';
+  if (extra) text += '【セッションメモ・補足】\n' + extra;
+  return text;
+}
+
+async function analyze() {
+  if (!apiKey) { alert('APIキーを設定してください'); return; }
+  const name = document.getElementById('client-name').value.trim() || '（名前未入力）';
+  const answers = getAnswers();
+  if (!answers) { alert('アンケート回答を貼り付けてください'); return; }
+
+  const userContent = `クライアント名：${name}\n\n${answers}`;
+
+  document.getElementById('analyze-btn').disabled = true;
+  document.getElementById('loading').classList.add('show');
+  document.getElementById('result').classList.remove('show');
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 2000,
+        system: SYSTEM_PROMPT,
+        messages: [{ role: 'user', content: userContent }]
+      })
+    });
+
+    const data = await res.json();
+    if (data.error) { alert('エラー：' + data.error.message); return; }
+
+    const text = data.content[0].text;
+    currentResult = text;
+    currentName = name;
+    currentSession = '';
+
+    document.getElementById('result-name').textContent = name + ' 様';
+    document.getElementById('result-text').value = text;
+    document.getElementById('result').classList.add('show');
+    document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  } catch(e) {
+    alert('通信エラーが発生しました。\n' + e.message);
+  } finally {
+    document.getElementById('analyze-btn').disabled = false;
+    document.getElementById('loading').classList.remove('show');
+  }
+}
+
+
+
+function parseResult(text) {
+  const sections = [];
+  const parts = text.split(/\n(?=■)/);
+  parts.forEach(part => {
+    const lines = part.trim().split('\n');
+    const titleLine = lines[0].replace(/^■\s*/, '').trim();
+    const body = lines.slice(1).join('\n').trim();
+    if (titleLine) sections.push({ title: '■ ' + titleLine, body });
+  });
+  return sections.length > 0 ? sections : [{ title: '志の原稿', body: text }];
+}
+
+function copyResult() {
+  navigator.clipboard.writeText(document.getElementById('result-text').value).then(() => {
+    const btn = document.querySelector('.btn-copy');
+    btn.textContent = 'コピーしました ✓';
+    setTimeout(() => btn.textContent = 'テキストをコピー', 2000);
+  });
+}
+
+function resetForm() {
+  document.querySelectorAll('textarea,input[type="text"]').forEach(el => el.value = '');
+  document.getElementById('result').classList.remove('show');
+  currentResult = ''; currentName = ''; currentSession = '';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+<!-- 印刷用テンプレート -->
+<div id="pdf-template">
+  <div class="pdf-wrap">
+    <div class="pdf-header">
+      <div class="pdf-header-accent"></div>
+      <div class="pdf-header-content">
+        <div class="pdf-logo">H E R O Z &nbsp; V I S I O N</div>
+        <div>
+          <div class="pdf-main-title">志の原稿</div>
+          <div class="pdf-sub-title">Kokorozashi no Genko &nbsp;·&nbsp; 30-Day Program</div>
+        </div>
+      </div>
+      <div class="pdf-header-deco">志</div>
+    </div>
+    <div class="pdf-client-bar">
+      <div class="pdf-client-name" id="pdf-client-name"></div>
+      <div class="pdf-client-meta" id="pdf-client-meta"></div>
+    </div>
+    <div class="pdf-body" id="pdf-body"></div>
+    <div class="pdf-next">
+      <div class="pdf-next-badge">NEXT STAGE</div>
+      <div class="pdf-next-content">
+        <div class="pdf-next-title">志の確立（90日）へ ─ あなたの旅の次のステージ</div>
+        <div class="pdf-next-body">志の原稿はまだ「輪郭（仮）」です。90日のプログラムで12項目すべてを完成させ、あなただけの志命（しめい）が生まれます。製本した「志の書」として手元に残ります。</div>
+        <div class="pdf-next-url">詳細・お申し込み：https://kulobouzu-cmd.github.io/HEROZVISION30/signup.html</div>
+      </div>
+    </div>
+    <div class="pdf-footer">
+      <div class="pdf-footer-left">
+        <div class="pdf-footer-accent"></div>
+        <div class="pdf-footer-logo">H E R O Z &nbsp; V I S I O N</div>
+      </div>
+      <div class="pdf-footer-copy">© 2026 HEROZ VISION &nbsp;|&nbsp; 縁ある人の志を見出し、豊かな社会を共創する。</div>
+    </div>
+  </div>
+</div>
+<script>
+function openPDF() {
+  currentResult = document.getElementById('result-text').value;
+  if (!currentResult) return;
+  const today = new Date().toLocaleDateString('ja-JP', {year:'numeric',month:'long',day:'numeric'});
+
+  document.getElementById('pdf-client-name').textContent = currentName + '　様';
+  document.getElementById('pdf-client-meta').innerHTML =
+    today + '<br>担当：谷川 哲也（マスターバインド）';
+
+  // セクションをパース＆HTML生成
+  const sections = parseResult(currentResult);
+  let bodyHTML = '';
+  sections.forEach((sec, idx) => {
+    bodyHTML += `<div class="pdf-section">
+      <div class="pdf-section-header">
+        <div class="pdf-section-bar"></div>
+        <div class="pdf-section-title">${sec.title}</div>
+      </div>
+      <div class="pdf-section-body">${sec.body.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</div>
+    </div>`;
+    if (idx < sections.length - 1) bodyHTML += '<div class="pdf-divider"></div>';
+  });
+  document.getElementById('pdf-body').innerHTML = bodyHTML;
+
+  // 印刷ダイアログを開く
+  window.print();
+}
+</script>
+</body>
+</html>

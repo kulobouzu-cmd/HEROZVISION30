@@ -225,7 +225,7 @@ body{font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;backgro
 
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const checks = {1: false, 2: false, 3: false};
 
 function toggle(n) {
@@ -248,4 +248,12 @@ function updateBtn() {
 }
 
 function toggleTerms(id) {
-  const body = document.getElementById('body-
+  const body = document.getElementById('body-' + id);
+  const icon = document.getElementById('icon-' + id);
+  const head = body.previousElementSibling;
+  const isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  icon.classList.toggle('open', !isOpen);
+  head.classList.toggle('open', !isOpen);
+}
+</script>

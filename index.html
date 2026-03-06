@@ -3,336 +3,1248 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>志言語化セッション｜志の探求・30日プログラム</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+<title>人生の羅針盤セッション｜HEROZ VISION</title>
+<meta name="description" content="「本当の自分がわからない」すべての人へ。潜在意識の言語化で自己理解が深まり、人生の軸が生まれる。60分・完全無料の体験セッションから。">
+<meta property="og:title" content="人生の羅針盤セッション｜HEROZ VISION">
+<meta property="og:description" content="「本当の自分がわからない」すべての人へ。60分・完全無料の体験セッションから始められます。">
+<meta property="og:type" content="website">
 <style>
-:root{--midnight:#0D1B2A;--burgundy:#6B1A2A;--burgundy2:#8B2438;--burgundy-l:#B03050;--gold:#C9A84C;--off-white:#FAFAF8;--warm-white:#F7F4EF;--warm-gray:#EEE9E2;--ink:#1A1A1A;--ink-light:#7A736A;--cream:#F5F0E8;}
-*{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;background:var(--off-white);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+  background: #F7F4EF;
+  color: #1A1A1A;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; }
 
-.hero{background:linear-gradient(160deg,#F7F2EA 0%,#EDE5D8 50%,#E8DDD0 100%);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:100px 32px 90px;text-align:center;position:relative;overflow:hidden;}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 30%,rgba(107,26,42,.06),transparent 70%);pointer-events:none;}
-.hero-inner{position:relative;z-index:1;max-width:560px;margin:0 auto;}
-.hero-program{display:inline-block;font-size:10px;letter-spacing:5px;color:var(--burgundy);font-weight:500;border:1px solid rgba(107,26,42,.25);padding:8px 20px;border-radius:1px;margin-bottom:48px;animation:fadeUp .9s ease both;}
-.hero-title-en{font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;font-size:clamp(36px,9vw,68px);font-weight:600;font-style:italic;color:var(--midnight);line-height:1.15;margin-bottom:16px;animation:fadeUp .9s .1s ease both;}
-.hero-title-ja{font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;font-size:clamp(13px,2.5vw,16px);font-weight:400;color:var(--ink-light);letter-spacing:3px;margin-bottom:52px;animation:fadeUp .9s .18s ease both;}
-.hero-rule{width:40px;height:1px;background:rgba(107,26,42,.3);margin:0 auto 40px;animation:fadeUp .9s .22s ease both;}
-.hero-catch{font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;font-size:clamp(24px,6vw,40px);font-weight:800;line-height:1.7;color:var(--midnight);margin-bottom:28px;animation:fadeUp .9s .28s ease both;}
-.hero-catch .ac{color:var(--burgundy);}
-.hero-sub{font-size:14px;color:var(--ink-light);line-height:2.1;margin-bottom:52px;font-weight:300;animation:fadeUp .9s .34s ease both;}
-.hero-cta{display:inline-flex;align-items:center;gap:14px;background:var(--burgundy);color:var(--cream);border-radius:2px;padding:20px 48px;font-size:13px;font-weight:500;letter-spacing:2.5px;text-decoration:none;transition:all .35s ease;animation:fadeUp .9s .32s ease both;position:relative;overflow:hidden;}
-.hero-cta::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,.07);transform:translateX(-100%);transition:transform .4s ease;}
-.hero-cta:hover::before{transform:translateX(0);}
-.hero-cta:hover{background:var(--burgundy2);transform:translateY(-2px);box-shadow:0 16px 48px rgba(107,26,42,.3);}
-.arrow{transition:transform .3s ease;}
-.hero-cta:hover .arrow{transform:translateX(5px);}
-.hero-note{margin-top:18px;font-size:11px;color:var(--ink-light);letter-spacing:1px;animation:fadeUp .9s .4s ease both;}
-.hero-sub-cta{margin-top:28px;animation:fadeUp .9s .46s ease both;}
-.hero-sub-link{font-size:12px;color:var(--ink-light);border-bottom:1px solid rgba(107,26,42,.3);padding-bottom:2px;text-decoration:none;transition:color .25s,border-color .25s;}
-.hero-sub-link:hover{color:var(--burgundy);border-color:var(--burgundy);}
+/* ===== CSS変数 ===== */
+:root {
+  --bg: #F7F4EF;
+  --bg2: #EEE9E2;
+  --bg3: #E5DDD2;
+  --dark: #0D1B2A;
+  --red: #6B1A2A;
+  --red2: #8B2438;
+  --cream: #F5F0E8;
+  --text: #1A1A1A;
+  --text2: #5A5450;
+  --text3: #8A837A;
+  --gold: #C9A84C;
+  --white: #FFFFFF;
+}
 
-.sec{padding:120px 32px;background:var(--off-white);}
-.sec-warm{padding:120px 32px;background:var(--warm-white);}
-.sec-inner{max-width:520px;margin:0 auto;}
-.eyebrow{font-size:9px;letter-spacing:5px;color:var(--ink-light);font-weight:300;margin-bottom:20px;}
-.sec-title{font-family:'游明朝','Yu Mincho','Noto Serif JP',serif;font-size:clamp(22px,5.5vw,32px);font-weight:700;line-height:1.65;color:var(--midnight);margin-bottom:48px;}
-.sec-title .ac{color:var(--burgundy);}
-.sec-body{font-size:14px;color:#4A4540;line-height:2.2;font-weight:300;}
-.sec-body strong{color:var(--ink);font-weight:500;}
+/* ===== HEADER ===== */
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 60px;
+  background: var(--white);
+  border-bottom: 1px solid rgba(0,0,0,.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 999;
+}
+.header-logo {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--dark);
+  font-weight: 500;
+}
+.header-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--red);
+  color: var(--cream);
+  padding: 10px 18px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: background .2s;
+}
+.header-btn:hover { background: var(--red2); }
 
-.pain-list{display:flex;flex-direction:column;}
-.pain-item{padding:28px 0;border-bottom:1px solid rgba(26,26,26,.08);display:flex;gap:20px;align-items:flex-start;}
-.pain-item:first-child{border-top:1px solid rgba(26,26,26,.08);}
-.dot-wrap{width:28px;height:28px;border-radius:50%;border:1px solid rgba(107,26,42,.25);flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:1px;}
-.dot{width:6px;height:6px;border-radius:50%;background:var(--burgundy-l);}
-.pain-text{font-family:'游明朝','Yu Mincho','Noto Serif JP',serif;font-size:15px;color:var(--ink);line-height:1.8;}
-.pain-sub{font-size:12px;color:var(--ink-light);margin-top:5px;line-height:1.7;font-weight:300;}
-.pain-close{margin-top:48px;padding:28px 24px;background:var(--warm-gray);border-left:3px solid var(--burgundy);border-radius:0 4px 4px 0;}
-.pain-close-text{font-family:'游明朝','Yu Mincho','Noto Serif JP',serif;font-size:15px;color:var(--midnight);line-height:1.9;}
-.pain-close-text em{font-style:normal;color:var(--burgundy);font-weight:600;}
+/* ===== HERO ===== */
+.hero {
+  background: var(--dark);
+  padding: 120px 24px 80px;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-inner { max-width: 560px; margin: 0 auto; }
+.hero-label {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--gold);
+  border: 1px solid rgba(201,168,76,.35);
+  padding: 8px 18px;
+  border-radius: 2px;
+  margin-bottom: 36px;
+}
+.hero-title {
+  font-size: clamp(28px, 7vw, 48px);
+  font-weight: 700;
+  line-height: 1.75;
+  color: var(--cream);
+  margin-bottom: 28px;
+  font-family: "游明朝", "Yu Mincho", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", serif;
+}
+.hero-title .ac { color: #C05070; }
+.hero-sub {
+  font-size: 14px;
+  color: rgba(245,240,232,.75);
+  line-height: 2.2;
+  font-weight: 300;
+  margin-bottom: 52px;
+}
+.hero-btn {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto 16px;
+  background: var(--red);
+  color: var(--cream);
+  padding: 20px 24px;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-align: center;
+  transition: background .2s, transform .2s;
+}
+.hero-btn:hover { background: var(--red2); transform: translateY(-2px); }
+.hero-free {
+  font-size: 12px;
+  color: rgba(245,240,232,.5);
+  letter-spacing: 1px;
+}
 
-.solution{background:var(--warm-white);padding:120px 32px;position:relative;overflow:hidden;}
-.solution::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 20%,rgba(107,26,42,.04),transparent 70%);pointer-events:none;}
-.solution-inner{max-width:520px;margin:0 auto;position:relative;z-index:1;}
-.solution .eyebrow{color:var(--ink-light);}
-.solution .sec-title{color:var(--midnight);}
-.solution .sec-body{color:#4A4540;}
-.solution .sec-body strong{color:var(--ink);}
-.sol-cards{display:flex;flex-direction:column;gap:16px;margin-top:40px;}
-.sol-card{background:#FFFFFF;border:1px solid rgba(107,26,42,.1);border-radius:4px;padding:24px;position:relative;box-shadow:0 2px 12px rgba(26,26,26,.06);}
-.sol-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--burgundy-l);border-radius:3px 0 0 3px;}
-.sol-num{font-size:9px;letter-spacing:4px;color:var(--burgundy);margin-bottom:10px;font-weight:700;opacity:1;letter-spacing:3px;}
-.sol-title{font-family:'游明朝','Yu Mincho','Noto Serif JP',serif;font-size:16px;color:var(--midnight);margin-bottom:8px;font-weight:600;}
-.sol-desc{font-size:12.5px;color:var(--ink-light);line-height:1.9;font-weight:300;}
+/* ===== SECTION BASE ===== */
+.sec { padding: 80px 24px; }
+.sec-dark { padding: 80px 24px; background: var(--dark); }
+.sec-gray { padding: 80px 24px; background: var(--bg2); }
+.sec-white { padding: 80px 24px; background: var(--white); }
+.sec-inner { max-width: 560px; margin: 0 auto; }
 
-.passion{background:var(--burgundy);padding:120px 32px;position:relative;overflow:hidden;}
-.passion::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 100% 80% at 80% 20%,rgba(255,255,255,.05),transparent 60%);pointer-events:none;}
-.passion-inner{max-width:520px;margin:0 auto;position:relative;z-index:1;}
-.passion .eyebrow{color:rgba(255,255,255,.3);}
-.passion-quote{font-family:'游明朝','Yu Mincho','Noto Serif JP',serif;font-size:clamp(22px,5.5vw,34px);font-weight:400;font-style:italic;color:rgba(255,255,255,.92);line-height:1.75;margin-bottom:48px;}
-.passion-body{font-size:14px;color:rgba(255,255,255,.6);line-height:2.2;font-weight:300;margin-bottom:40px;}
-.passion-body strong{color:rgba(255,255,255,.9);font-weight:500;}
-.sig{display:flex;align-items:center;gap:16px;padding-top:28px;border-top:1px solid rgba(255,255,255,.15);}
-.sig-line{width:32px;height:1px;background:rgba(255,255,255,.3);}
-.sig-name{font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;font-size:16px;color:rgba(255,255,255,.65);font-style:italic;}
+.sec-label {
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--red);
+  margin-bottom: 16px;
+  display: block;
+  font-weight: 500;
+}
+.sec-label-light {
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: rgba(201,168,76,.7);
+  margin-bottom: 16px;
+  display: block;
+  font-weight: 500;
+}
+.sec-title {
+  font-family: "游明朝", "Yu Mincho", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", serif;
+  font-size: clamp(20px, 5vw, 28px);
+  font-weight: 700;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 40px;
+}
+.sec-title .ac { color: var(--red); }
+.sec-title-light {
+  font-family: "游明朝", "Yu Mincho", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", serif;
+  font-size: clamp(20px, 5vw, 28px);
+  font-weight: 700;
+  line-height: 1.8;
+  color: var(--cream);
+  margin-bottom: 40px;
+}
+.sec-body {
+  font-size: 15px;
+  color: var(--text2);
+  line-height: 2.2;
+  font-weight: 300;
+}
+.sec-body strong { color: var(--text); font-weight: 500; }
+.sec-body-light {
+  font-size: 15px;
+  color: rgba(245,240,232,.65);
+  line-height: 2.2;
+  font-weight: 300;
+}
+.sec-body-light strong { color: rgba(245,240,232,.85); font-weight: 500; }
 
-.benefit-grid{display:flex;flex-direction:column;margin-top:48px;}
-.benefit-item{padding:32px 0;border-bottom:1px solid rgba(26,26,26,.08);display:grid;grid-template-columns:48px 1fr;gap:20px;align-items:start;}
-.benefit-item:first-child{border-top:1px solid rgba(26,26,26,.08);}
-.benefit-num{font-family:'游明朝','Yu Mincho','Noto Serif JP',serif;font-size:36px;color:rgba(107,26,42,.2);font-weight:300;line-height:1;margin-top:-4px;}
-.benefit-title{font-family:'游明朝','Yu Mincho','Noto Serif JP',serif;font-size:16px;color:var(--midnight);font-weight:700;margin-bottom:8px;line-height:1.6;}
-.benefit-desc{font-size:13px;color:var(--ink-light);line-height:1.9;font-weight:300;}
+/* ===== DIVIDER ===== */
+.divider {
+  width: 40px;
+  height: 2px;
+  background: var(--red);
+  margin: 0 0 28px;
+  border-radius: 1px;
+}
+.divider-center { margin: 0 auto 32px; }
 
-.journey{background:var(--warm-white);padding:100px 32px;}
-.journey-inner{max-width:520px;margin:0 auto;}
-.journey-steps{display:flex;flex-direction:column;gap:0;margin-top:48px;}
-.journey-step{display:grid;grid-template-columns:80px 1fr;gap:20px;position:relative;}
-.journey-step:not(:last-child)::after{content:'';position:absolute;left:39px;top:48px;bottom:-16px;width:1px;background:rgba(107,26,42,.15);}
-.journey-step-left{display:flex;flex-direction:column;align-items:center;padding-top:4px;}
-.journey-step-num{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;font-size:16px;font-weight:600;flex-shrink:0;}
-.journey-step-num.current{background:var(--burgundy);color:var(--cream);}
-.journey-step-num.next{background:transparent;border:1px solid rgba(26,26,26,.15);color:var(--ink-light);}
-.journey-step-right{padding-bottom:44px;}
-.journey-step-label{font-size:9px;letter-spacing:3px;color:var(--ink-light);margin-bottom:8px;font-weight:300;}
-.journey-step-title{font-family:'游明朝','Yu Mincho','Noto Serif JP',serif;font-size:17px;color:var(--midnight);font-weight:700;margin-bottom:8px;line-height:1.6;}
-.journey-step-title.current{color:var(--burgundy);}
-.journey-step-price{font-size:13px;color:var(--ink-light);margin-bottom:8px;}
-.journey-step-desc{font-size:13px;color:var(--ink-light);line-height:1.9;font-weight:300;}
-.journey-step-badge{display:inline-block;font-size:9px;letter-spacing:2px;background:var(--burgundy);color:var(--cream);padding:4px 10px;border-radius:1px;margin-bottom:10px;}
+/* ===== PAIN LIST ===== */
+.pain-list { margin-bottom: 40px; }
+.pain-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0,0,0,.07);
+}
+.pain-item:first-child { border-top: 1px solid rgba(0,0,0,.07); }
+.pain-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--red);
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+.pain-main {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.65;
+  margin-bottom: 6px;
+}
+.pain-sub {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.8;
+}
+.insight {
+  background: var(--bg2);
+  border-left: 4px solid var(--red);
+  padding: 24px 20px;
+  border-radius: 0 4px 4px 0;
+}
+.insight p {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 2.1;
+  font-weight: 400;
+}
+.insight em { font-style: normal; color: var(--red); font-weight: 500; }
 
-.details{background:var(--warm-gray);padding:100px 32px;}
-.details-inner{max-width:520px;margin:0 auto;}
-.dtable{width:100%;margin-top:40px;}
-.drow{display:grid;grid-template-columns:100px 1fr;border-bottom:1px solid rgba(26,26,26,.08);padding:18px 0;}
-.drow:first-child{border-top:1px solid rgba(26,26,26,.08);}
-.dkey{font-size:11px;color:var(--ink-light);letter-spacing:1px;padding-top:2px;}
-.dval{font-family:'游明朝','Yu Mincho','Noto Serif JP',serif;font-size:15px;color:var(--midnight);line-height:1.7;}
-.dval .pnum{font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;font-size:28px;font-weight:600;color:var(--burgundy);}
+/* ===== COMPARE ===== */
+.compare { margin: 32px 0; border-radius: 6px; overflow: hidden; }
+.compare-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.compare-head-l {
+  background: var(--bg2);
+  padding: 14px 16px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text3);
+  letter-spacing: 1px;
+}
+.compare-head-r {
+  background: var(--dark);
+  padding: 14px 16px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+.compare-cell-l {
+  background: var(--bg3);
+  padding: 14px 16px;
+  font-size: 13px;
+  color: var(--text2);
+  border-top: 1px solid rgba(0,0,0,.06);
+  line-height: 1.7;
+}
+.compare-cell-r {
+  background: #162330;
+  padding: 14px 16px;
+  font-size: 13px;
+  color: rgba(245,240,232,.85);
+  border-top: 1px solid rgba(255,255,255,.05);
+  line-height: 1.7;
+}
+.compare-cell-r::before { content: "✓  "; color: var(--gold); font-size: 11px; }
 
-.cta-bottom{background:var(--midnight);padding:120px 32px 140px;text-align:center;position:relative;overflow:hidden;}
-.cta-bottom::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,.004) 2px,rgba(255,255,255,.004) 4px);pointer-events:none;}
-.cta-bottom::after{content:'';position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(107,26,42,.2) 0%,transparent 70%);bottom:-100px;left:50%;transform:translateX(-50%);pointer-events:none;}
-.cta-inner{max-width:480px;margin:0 auto;position:relative;z-index:1;}
-.cta-ey{font-size:9px;letter-spacing:5px;color:rgba(201,168,76,.35);margin-bottom:32px;font-weight:300;}
-.cta-title{font-family:'游明朝','Yu Mincho','Noto Serif JP',serif;font-size:clamp(24px,5.5vw,34px);font-weight:700;color:var(--cream);line-height:1.65;margin-bottom:16px;}
-.cta-title .ac{color:var(--burgundy-l);}
-.cta-sub{font-size:13px;color:rgba(245,240,232,.35);line-height:2;margin-bottom:52px;font-weight:300;}
-.cta-rule{width:40px;height:1px;background:rgba(201,168,76,.25);margin:0 auto 52px;}
-.cta-sub-wrap{margin-top:28px;}
-.cta-sub-link{font-size:12px;color:rgba(245,240,232,.3);border-bottom:1px solid rgba(245,240,232,.15);padding-bottom:2px;text-decoration:none;transition:color .25s,border-color .25s;}
-.cta-sub-link:hover{color:rgba(245,240,232,.7);border-color:rgba(245,240,232,.4);}
+/* ===== PSYCH BOX ===== */
+.psych-box {
+  background: var(--dark);
+  border-radius: 8px;
+  padding: 40px 24px;
+  text-align: center;
+  margin-top: 40px;
+}
+.psych-num {
+  font-family: "游明朝", "Yu Mincho", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", serif;
+  font-size: 80px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.psych-num span { font-size: 30px; color: #C9A84C; font-weight: 500; }
+.psych-desc {
+  font-size: 16px;
+  color: rgba(245,240,232,.85);
+  line-height: 1.75;
+  margin-bottom: 24px;
+  font-weight: 300;
+}
+.psych-tags {
+  font-size: 11px;
+  color: rgba(255,255,255,.65);
+  line-height: 2.2;
+  letter-spacing: 0.3px;
+}
 
-.footer{background:var(--midnight);border-top:1px solid rgba(255,255,255,.05);padding:40px 32px 60px;text-align:center;}
-.footer-logo{font-size:9px;letter-spacing:6px;color:rgba(245,240,232,.15);margin-bottom:6px;font-weight:300;}
-.footer-tag{font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;font-size:13px;color:rgba(245,240,232,.12);font-style:italic;margin-bottom:20px;}
-.footer-copy{font-size:10px;color:rgba(245,240,232,.1);}
+/* ===== QUOTE ===== */
+.quote-block {
+  border-left: 3px solid rgba(201,168,76,.4);
+  padding-left: 20px;
+  margin-bottom: 36px;
+}
+.quote-text {
+  font-family: "游明朝", "Yu Mincho", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", serif;
+  font-size: clamp(18px, 4.5vw, 24px);
+  color: rgba(245,240,232,.95);
+  line-height: 1.9;
+  font-weight: 500;
+}
+.sig {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,.07);
+}
+.sig-line { width: 24px; height: 1px; background: rgba(255,255,255,.2); }
+.sig-name { font-size: 13px; color: rgba(255,255,255,.35); letter-spacing: 2px; }
 
-.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:1000;}
-.legal-modal{display:none;position:fixed;inset:0;z-index:1001;overflow-y:auto;padding:20px 16px 60px;}
-.modal-inner{background:#FDFDFD;max-width:600px;margin:0 auto;border-radius:16px;padding:28px 20px 60px;}
-.modal-close{font-size:13px;color:#7A736A;cursor:pointer;margin-bottom:28px;display:inline-block;}
-.modal-label{font-size:9px;letter-spacing:4px;color:var(--burgundy);font-weight:400;margin-bottom:12px;}
-.modal-title{font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;font-size:22px;color:var(--midnight);font-weight:700;margin-bottom:6px;}
-.modal-date{font-size:11px;color:#7A736A;margin-bottom:32px;}
-.legal-table{width:100%;border-collapse:collapse;margin-bottom:24px;}
-.legal-table tr{border-bottom:1px solid rgba(26,26,26,.08);}
-.legal-table tr:first-child{border-top:1px solid rgba(26,26,26,.08);}
-.legal-table th{width:90px;padding:14px 12px 14px 0;font-size:11px;font-weight:500;color:var(--midnight);vertical-align:top;}
-.legal-table td{padding:14px 0;font-size:12.5px;color:#4A4540;line-height:1.9;font-weight:300;}
-.legal-note{font-size:12px;color:#7A736A;line-height:1.9;padding:16px;background:#F4F1EC;border-radius:8px;}
-.legal-article{margin-bottom:24px;}
-.legal-art-title{font-family:'游ゴシック','Yu Gothic','Noto Sans JP',sans-serif;font-size:14px;color:var(--midnight);font-weight:700;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid rgba(26,26,26,.08);}
-.legal-article p{font-size:13px;color:#4A4540;line-height:2;font-weight:300;}
+/* ===== PROFILE ===== */
+.profile-wrap { margin-top: 36px; }
+.profile-top {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+.profile-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--bg2);
+  border: 2px solid rgba(107,26,42,.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 9px;
+  color: var(--text3);
+  letter-spacing: 1px;
+}
+.profile-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+.profile-role { font-size: 11px; color: var(--red); letter-spacing: 1px; margin-bottom: 12px; }
+.qual-item {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin-bottom: 5px;
+}
+.qual-dot {
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--red);
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+.qual-text { font-size: 12px; color: var(--text3); line-height: 1.6; }
 
-@keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+/* ===== BENEFITS ===== */
+.benefit-list { margin-top: 36px; }
+.benefit-item {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 16px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(0,0,0,.07);
+  align-items: start;
+}
+.benefit-item:first-child { border-top: 1px solid rgba(0,0,0,.07); }
+.benefit-num {
+  font-family: "游明朝", "Yu Mincho", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", serif;
+  font-size: 32px;
+  color: rgba(107,26,42,.15);
+  font-weight: 300;
+  line-height: 1;
+  margin-top: -2px;
+}
+.benefit-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+  line-height: 1.65;
+  font-family: "游明朝", "Yu Mincho", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", serif;
+}
+.benefit-desc { font-size: 14px; color: var(--text2); line-height: 2; }
+
+/* ===== JOURNEY / STEPS ===== */
+.steps { margin-top: 36px; }
+.step {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 16px;
+  position: relative;
+}
+.step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 27px;
+  top: 44px;
+  bottom: -12px;
+  width: 1px;
+  background: rgba(107,26,42,.15);
+}
+.step-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.step-icon.active { background: var(--red); color: var(--cream); }
+.step-icon.inactive { background: transparent; border: 1px solid rgba(0,0,0,.15); color: var(--text3); }
+.step-body { padding-bottom: 40px; }
+.step-badge {
+  display: inline-block;
+  font-size: 9px;
+  letter-spacing: 2px;
+  background: var(--red);
+  color: var(--cream);
+  padding: 4px 10px;
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+.step-badge-gray {
+  display: inline-block;
+  font-size: 9px;
+  letter-spacing: 2px;
+  background: var(--bg2);
+  color: var(--text3);
+  padding: 4px 10px;
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+.step-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+  line-height: 1.6;
+  font-family: "游明朝", "Yu Mincho", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", serif;
+}
+.step-title.active { color: var(--red); }
+.step-sub { font-size: 12px; color: var(--text3); margin-bottom: 6px; }
+.step-desc { font-size: 14px; color: var(--text2); line-height: 2; }
+
+/* ===== DETAIL TABLE ===== */
+.free-tag {
+  display: inline-block;
+  background: var(--red);
+  color: var(--cream);
+  font-size: 9px;
+  letter-spacing: 2px;
+  padding: 6px 14px;
+  border-radius: 2px;
+  margin-bottom: 24px;
+}
+.detail-table { margin-top: 8px; }
+.detail-row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+  padding: 14px 0;
+}
+.detail-row:first-child { border-top: 1px solid rgba(0,0,0,.08); }
+.detail-key { font-size: 12px; color: var(--text2); padding-top: 2px; font-weight: 500; }
+.detail-val { font-size: 14px; color: var(--text); line-height: 1.7; font-weight: 400; }
+
+/* ===== CTA SECTION ===== */
+.cta-sec {
+  background: var(--dark);
+  padding: 80px 24px 100px;
+  text-align: center;
+}
+.cta-inner { max-width: 480px; margin: 0 auto; }
+.cta-title {
+  font-family: "游明朝", "Yu Mincho", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", serif;
+  font-size: clamp(22px, 5.5vw, 34px);
+  font-weight: 700;
+  color: var(--cream);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.cta-title .ac { color: #C05070; }
+.cta-rule { width: 32px; height: 1px; background: rgba(201,168,76,.25); margin: 28px auto; }
+.cta-sub { font-size: 14px; color: rgba(245,240,232,.55); line-height: 2; margin-bottom: 44px; }
+.cta-btn {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 16px;
+  background: var(--red);
+  color: var(--cream);
+  padding: 22px 24px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-align: center;
+  transition: background .2s, transform .2s;
+}
+.cta-btn:hover { background: var(--red2); transform: translateY(-2px); }
+.price-note { font-size: 10px; color: rgba(245,240,232,.18); letter-spacing: 1px; margin-bottom: 24px; }
+.cta-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+.cta-link {
+  font-size: 12px;
+  color: rgba(245,240,232,.3);
+  border-bottom: 1px solid rgba(245,240,232,.12);
+  padding-bottom: 2px;
+  transition: color .2s, border-color .2s;
+}
+.cta-link:hover { color: rgba(245,240,232,.65); border-color: rgba(245,240,232,.35); }
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--dark);
+  border-top: 1px solid rgba(255,255,255,.05);
+  padding: 40px 24px 56px;
+  text-align: center;
+}
+.footer-logo { font-size: 9px; letter-spacing: 6px; color: rgba(245,240,232,.1); margin-bottom: 6px; }
+.footer-tag { font-size: 11px; color: rgba(245,240,232,.07); font-style: italic; margin-bottom: 20px; }
+.footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; }
+.footer-link { font-size: 11px; color: rgba(245,240,232,.2); cursor: pointer; transition: color .2s; }
+.footer-link:hover { color: rgba(245,240,232,.5); }
+.footer-copy { font-size: 10px; color: rgba(245,240,232,.08); }
+
+/* ===== MODAL ===== */
+/* modal: checkbox trick - JS不要 */
+.modal-toggle { display: none; }
+.modal-overlay {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.6);
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 20px 16px 60px;
+  cursor: pointer;
+}
+.modal-toggle:checked + .modal-overlay { display: block; }
+.modal-box {
+  background: #fff;
+  max-width: 580px;
+  margin: 0 auto;
+  border-radius: 12px;
+  padding: 28px 20px 52px;
+  cursor: default;
+  position: relative;
+}
+.modal-close-label {
+  font-size: 13px;
+  color: #7A736A;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 24px;
+  user-select: none;
+}
+.modal-close-label:hover { color: #1A1A1A; }
+.modal-eyebrow { font-size: 9px; letter-spacing: 4px; color: var(--red); margin-bottom: 10px; }
+.modal-title { font-size: 18px; color: var(--dark); font-weight: 700; margin-bottom: 4px; }
+.modal-date { font-size: 11px; color: #7A736A; margin-bottom: 28px; }
+.legal-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+.legal-table tr { border-bottom: 1px solid rgba(0,0,0,.07); }
+.legal-table tr:first-child { border-top: 1px solid rgba(0,0,0,.07); }
+.legal-table th { width: 88px; padding: 12px 10px 12px 0; font-size: 11px; font-weight: 500; color: var(--dark); vertical-align: top; }
+.legal-table td { padding: 12px 0; font-size: 12.5px; color: #4A4540; line-height: 1.9; font-weight: 300; }
+.legal-note { font-size: 12px; color: #7A736A; line-height: 1.9; padding: 14px; background: #F4F1EC; border-radius: 6px; }
+.law-art { margin-bottom: 20px; }
+.law-title { font-size: 13px; color: var(--dark); font-weight: 700; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid rgba(0,0,0,.07); }
+.law-body { font-size: 12.5px; color: #4A4540; line-height: 2; }
 </style>
 </head>
 <body>
 
+<!-- HEADER -->
+<header class="header">
+  <span class="header-logo">HEROZ VISION</span>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfvk1yMAFq2wzViMnwLHel_HkCf9TQAsS44OxAqM1Rv-3u0IQ/viewform" class="header-btn" target="_blank">無料体験へ →</a>
+</header>
+
+<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <h1 class="hero-main-title">志言語化セッション</h1>
-    <div class="hero-subtitle">〜 志の探求 30日プログラム 〜</div>
-    <div class="hero-rule"></div>
-    <div class="hero-catch">あなたに眠る<br><span class="ac">本当の志</span>を<br>知っていますか。</div>
-    <p class="hero-sub">言葉にならない想いが、<br>あなたの中で静かに息をしています。</p>
-    <a href="signup.html" class="hero-cta" target="_blank">お申し込みはこちら <span class="arrow">→</span></a>
-    <p class="hero-note">規約確認 → お支払い → アンケートの順に進みます</p>
-    <div class="hero-sub-cta">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdyRjyj4UzUASVXWv1gbf_E6e3a8X7_Z_7TfgLawt50jN4dbw/viewform" class="hero-sub-link" target="_blank">まずは無料で30分、話を聞いてみる →</a>
-    </div>
+    <div class="hero-label">人生の羅針盤セッション</div>
+    <h1 class="hero-title">
+      あなたは今、<br>
+      <span class="ac">本当の自分</span>を<br>
+      知っていますか。
+    </h1>
+    <p class="hero-sub">
+      自分がわからないから、何をしたいかもわからない。<br>
+      その答えは、あなたの内側にすでにあります。<br>
+      ただ、まだ言葉になっていないだけです。
+    </p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfvk1yMAFq2wzViMnwLHel_HkCf9TQAsS44OxAqM1Rv-3u0IQ/viewform" class="hero-btn" target="_blank">
+      無料で自分を知る旅を始める →
+    </a>
+    <p class="hero-free">60分・完全無料・オンライン（Zoom / Google Meet）</p>
   </div>
 </section>
 
+<!-- PAIN -->
 <section class="sec">
   <div class="sec-inner">
-    <div class="eyebrow">RESONANCE · 共感</div>
-    <h2 class="sec-title">その「違和感」に、<br>名前をつけられますか。</h2>
+    <span class="sec-label">RESONANCE · 共感</span>
+    <div class="divider"></div>
+    <h2 class="sec-title">その「わからなさ」に、<br>名前はありますか。</h2>
     <div class="pain-list">
-      <div class="pain-item"><div class="dot-wrap"><div class="dot"></div></div><div><div class="pain-text">仕事は「できている」。でも朝、心が躍らない。</div><div class="pain-sub">成果を出せているのに、何かが足りない感覚が消えない。</div></div></div>
-      <div class="pain-item"><div class="dot-wrap"><div class="dot"></div></div><div><div class="pain-text">「本当にやりたいこと」を聞かれると、言葉が止まる。</div><div class="pain-sub">情熱がどこにあるのか、自分でもわからなくなっている。</div></div></div>
-      <div class="pain-item"><div class="dot-wrap"><div class="dot"></div></div><div><div class="pain-text">転職・独立を考えるが、「軸」が見えず踏み出せない。</div><div class="pain-sub">選択肢は増えているのに、決断の根拠が持てない。</div></div></div>
-      <div class="pain-item"><div class="dot-wrap"><div class="dot"></div></div><div><div class="pain-text">「自分らしさ」を語れる言葉を、まだ持っていない。</div><div class="pain-sub">他者からの評価で動いてきた。自分の評価軸がわからない。</div></div></div>
+      <div class="pain-item">
+        <div class="pain-dot"></div>
+        <div>
+          <div class="pain-main">仕事はできている。でも朝、心が躍らない。</div>
+          <div class="pain-sub">成果を出せているのに「これでいいのか」という感覚が消えない。</div>
+        </div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-dot"></div>
+        <div>
+          <div class="pain-main">「本当にやりたいこと」を聞かれると、言葉が止まる。</div>
+          <div class="pain-sub">情熱がどこにあるのか、自分でもわからなくなっている。</div>
+        </div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-dot"></div>
+        <div>
+          <div class="pain-main">転職・独立を考えるが、「軸」が見えず踏み出せない。</div>
+          <div class="pain-sub">選択肢は増えているのに、根拠を持って決断できない。</div>
+        </div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-dot"></div>
+        <div>
+          <div class="pain-main">心理テストを受けても「だから何？」という感覚が残る。</div>
+          <div class="pain-sub">傾向はわかった。でも何も変わっていない。</div>
+        </div>
+      </div>
     </div>
-    <div class="pain-close"><div class="pain-close-text">その違和感は、弱さではありません。<br>それは、<em>あなたの中に眠る志が発している信号</em>です。<br>その志が、まだ言葉になっていないだけです。</div></div>
-  </div>
-</section>
-
-<section class="solution">
-  <div class="solution-inner">
-    <div class="eyebrow">THE SOLUTION · 解決策</div>
-    <h2 class="sec-title">データと対話が融合する、<br>唯一無二のセッション。</h2>
-    <p class="sec-body"><strong>44問のアンケート</strong>があなたの過去・現在・未来を言語化し、そのデータをもとに<strong>キャリアコンサルタントが4回のセッション</strong>で深く掘り下げます。頭で「わかっている」ことを、志で「感じられる」言葉に変えていく。</p>
-    <div class="sol-cards">
-      <div class="sol-card"><div class="sol-num">STEP 01</div><div class="sol-title">アンケートで「本音」を掘り起こす</div><div class="sol-desc">44問の設問があなたの原体験・動機・志を丁寧に言語化します。書くことで、初めて見えてくるものがあります。</div></div>
-      <div class="sol-card"><div class="sol-num">STEP 02</div><div class="sol-title">4回の個別セッションで「志の軸」を確立する</div><div class="sol-desc">回答を精読したキャリアコンサルタントが、あなたの言葉の奥にある核心を一緒に掘り下げます。対話の中で、自分では見えなかった「志の軸」が浮かび上がります。</div></div>
-      <div class="sol-card"><div class="sol-num">STEP 03</div><div class="sol-title">「志の原稿」として見える化する</div><div class="sol-desc">固有の能力・動機の源泉・志の原稿が一枚のドキュメントになります。これが、あなたの人生の羅針盤になります。</div></div>
+    <div class="insight">
+      <p>自分がわからないのは、意志が弱いからではありません。<br><em>あなたの内側にある「本当の想い」が、まだ言葉になっていないだけです。</em><br>そして、自分がわかると、他者のことも、人間関係も、変わり始めます。</p>
     </div>
   </div>
 </section>
 
-<section class="passion">
-  <div class="passion-inner">
-    <div class="eyebrow">FROM THE CONSULTANT · 想い</div>
-    <div class="passion-quote">縁ある人が自分の志と出会い、<br>人生の主人公として生き始める。<br>それを見届けることが、私の使命です。</div>
-    <div class="passion-body">私は長年、キャリアコンサルタントとして多くのビジネスパーソンと向き合ってきました。<br><br>気づいたことがあります。<strong>ほとんどの人は、自分の本当の強みを知らないまま、他者の期待に応え続けている</strong>ということを。<br><br>それは怠慢ではなく、誰も「志の言語化」を教えてくれなかったからです。<br><br>このプログラムは、あなたの「志の在り処」を一緒に探す旅です。<strong>正解は、最初からあなたの中にあります。</strong>私は、それを言葉にする伴走者でありたい。</div>
-    <div class="sig"><div class="sig-line"></div><div class="sig-name">谷川 哲也 · Tetsuya Tanigawa</div></div>
+<!-- WHY -->
+<section class="sec-gray">
+  <div class="sec-inner">
+    <span class="sec-label">THE DIFFERENCE · 既存との違い</span>
+    <div class="divider"></div>
+    <h2 class="sec-title">検査は「傾向」を教えるが、<br><span class="ac">気づきがなければ何も変わらない。</span></h2>
+    <p class="sec-body">MBTIやストレングスファインダーなどのツールは優れた分析手法です。ただ、それらは「外から傾向を分類する」設計です。<strong>自分の内側からの気づきが生まれていない</strong>から、スコアを見ても日常は変わらないのです。</p>
+    <div class="compare">
+      <div class="compare-row">
+        <div class="compare-head-l">既存の心理学・適性検査</div>
+        <div class="compare-head-r">人生の羅針盤セッション</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell-l">外から傾向を分類する</div>
+        <div class="compare-cell-r">内側から想いを掘り起こす</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell-l">統計的パターンを当てはめる</div>
+        <div class="compare-cell-r">その人固有のストーリーを扱う</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell-l">気づかなければ何も変わらない</div>
+        <div class="compare-cell-r">対話の中で自分が気づくプロセス</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell-l">タイプ・スコアが成果物</div>
+        <div class="compare-cell-r">自分の言葉で書かれた人生の地図</div>
+      </div>
+    </div>
+    <p class="sec-body"><strong>年齢は関係ありません。</strong>20代でも、40代でも、60代でも。「本当の自分がわからない」と感じているすべての人に、このセッションは開かれています。</p>
+
+    <div class="psych-box">
+      <div class="psych-num">30<span>以上</span></div>
+      <div class="psych-desc"><strong style="color:#C9A84C;">234問</strong>のアンケートに込められた<br>心理学・哲学理論の数</div>
+      <div class="psych-tags">発達心理学 · 愛着理論 · ポジティブ心理学 · ロゴセラピー<br>認知行動療法（CBT）· ユング心理学 · アドラー心理学<br>自己決定理論 · ナラティブセラピー · レジリエンス理論 · 他</div>
+    </div>
   </div>
 </section>
 
+<!-- PASSION -->
+<section class="sec-dark">
+  <div class="sec-inner">
+    <span class="sec-label-light">FROM THE CONSULTANT · 想い</span>
+    <div class="quote-block">
+      <div class="quote-text">
+        自分がわかると、人生が動き始める。<br>
+        その瞬間を一緒に作ることが、<br>
+        私がここにいる理由です。
+      </div>
+    </div>
+    <p class="sec-body-light">長年、多くのビジネスパーソンと向き合ってきて気づいたことがあります。<br><br>ほとんどの人は、<strong>自分の本当の想いを知らないまま、他者の期待に応え続けている</strong>ということを。<br><br>それは怠慢ではなく、誰も「本当の自分の言語化」を教えてくれなかったからです。<br><br>このセッションは、あなたの内側にすでにある答えを、一緒に言葉にする旅です。</p>
+    <div class="sig">
+      <div class="sig-line"></div>
+      <div class="sig-name">谷川 哲也 · Tetsuya Tanigawa</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROFILE -->
+<section class="sec-white">
+  <div class="sec-inner">
+    <span class="sec-label">CONSULTANT · 担当コンサルタント</span>
+    <div class="divider"></div>
+    <div class="profile-wrap">
+      <div class="profile-top">
+        <div class="profile-photo">PHOTO</div>
+        <div>
+          <div class="profile-name">谷川 哲也</div>
+          <div class="profile-role">HEROZ VISION 代表 ／ キャリアコンサルタント</div>
+          <div class="qual-item"><div class="qual-dot"></div><div class="qual-text">国家資格キャリアコンサルタント</div></div>
+          <div class="qual-item"><div class="qual-dot"></div><div class="qual-text">JPSA認定ベーシックプロスピーカー</div></div>
+        </div>
+      </div>
+      <p class="sec-body">1985年、兵庫県生まれ。17歳で社会に出る。<br><br>セールスの最前線でトップを走り続けるも、マネジメントにおいて組織崩壊の危機を経験。「なぜ人は動かないのか」を自問自答する中で、<strong>心理学をベースにした人との関わり方</strong>を独自に体系化。<br><br>カウンセリング・コーチング・コンサルティングの3つの専門手法を組み合わせた独自アプローチを確立し、数多くのビジネスパーソンの<strong>「本当の自分」の言語化</strong>を支援してきた。</p>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
 <section class="sec">
   <div class="sec-inner">
-    <div class="eyebrow">BENEFITS · 得られるもの</div>
-    <h2 class="sec-title">30日後、あなたの中に<br><span class="ac">濁りのない志の軸</span>が生まれます。</h2>
-    <div class="benefit-grid">
-      <div class="benefit-item"><div class="benefit-num">01</div><div><div class="benefit-title">「自分の強み」を、自分の言葉で語れるようになる</div><div class="benefit-desc">他者からの評価ではなく、自分の原体験から導かれた固有の能力を言語化します。面接でも、日常でも、ブレない自己紹介ができるようになります。</div></div></div>
-      <div class="benefit-item"><div class="benefit-num">02</div><div><div class="benefit-title">なぜ自分が動けるのか、動けないのかがわかる</div><div class="benefit-desc">あなたを突き動かす「動機の源泉」が明確になります。モチベーションが続かない理由も、ここから見えてきます。</div></div></div>
-      <div class="benefit-item"><div class="benefit-num">03</div><div><div class="benefit-title">キャリアの選択に、根拠が生まれる</div><div class="benefit-desc">転職・独立・現職継続。どの選択も、「志の原稿」という軸があれば怖くありません。感情ではなく、自分の核心から選べるようになります。</div></div></div>
-      <div class="benefit-item"><div class="benefit-num">04</div><div><div class="benefit-title">「志の原稿」という羅針盤を手に入れる</div><div class="benefit-desc">世界に一つのドキュメント。迷ったときに戻れる場所。あなたの志の地図の輪郭が完成します。</div></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="journey">
-  <div class="journey-inner">
-    <div class="eyebrow">YOUR JOURNEY · この旅の先に</div>
-    <h2 class="sec-title">30日は、<br><span class="ac">旅の入口</span>です。</h2>
-    <p class="sec-body" style="margin-bottom:0;">志の探求で志の輪郭を掴んだ先に、さらに深い旅が続きます。あなたのペースで、進めてください。</p>
-    <div class="journey-steps">
-      <div class="journey-step">
-        <div class="journey-step-left"><div class="journey-step-num current">1</div></div>
-        <div class="journey-step-right">
-          <div class="journey-step-badge">NOW · 現在地</div>
-          <div class="journey-step-title current">志の探求（30日）</div>
-          <div class="journey-step-price">¥88,000（税込）</div>
-          <div class="journey-step-desc">44問のアンケートと4回のセッションで志の輪郭を掴む。「志の原稿」を受け取る。</div>
+    <span class="sec-label">BENEFITS · セッションで得られること</span>
+    <div class="divider"></div>
+    <h2 class="sec-title">自己理解が深まると、<br><span class="ac">すべてが変わり始める。</span></h2>
+    <div class="benefit-list">
+      <div class="benefit-item">
+        <div class="benefit-num">01</div>
+        <div>
+          <div class="benefit-title">「本当の自分の強み」を、自分の言葉で語れるようになる</div>
+          <div class="benefit-desc">原体験から導かれた固有の能力を言語化。ブレない自己紹介ができるようになります。</div>
         </div>
       </div>
-      <div class="journey-step">
-        <div class="journey-step-left"><div class="journey-step-num next">2</div></div>
-        <div class="journey-step-right">
-          <div class="journey-step-label">NEXT STAGE</div>
-          <div class="journey-step-title">志の確立（90日）</div>
-          <div class="journey-step-price">¥388,000（税込）</div>
-          <div class="journey-step-desc">12回のセッションで志の書（12項目）を完成させる。旅の終わりに、あなただけの「志命（しめい）」が生まれます。</div>
+      <div class="benefit-item">
+        <div class="benefit-num">02</div>
+        <div>
+          <div class="benefit-title">なぜ自分が動けるのか、動けないのかがわかる</div>
+          <div class="benefit-desc">あなたを突き動かす「動機の源泉」が明確になります。やる気が続かない理由も見えてきます。</div>
         </div>
       </div>
-      <div class="journey-step">
-        <div class="journey-step-left"><div class="journey-step-num next">3</div></div>
-        <div class="journey-step-right">
-          <div class="journey-step-label">ONGOING</div>
-          <div class="journey-step-title">志の伴走</div>
-          <div class="journey-step-price">¥33,000/月（税込）　志の確立修了者限定</div>
-          <div class="journey-step-desc">志命を生き続けるための月1回の伴走セッション。志の書は、生き続けるものです。</div>
+      <div class="benefit-item">
+        <div class="benefit-num">03</div>
+        <div>
+          <div class="benefit-title">他者への理解が深まり、人間関係が変わる</div>
+          <div class="benefit-desc">自分の内側が見えると、他者の行動や感情の背景も見えやすくなります。</div>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-num">04</div>
+        <div>
+          <div class="benefit-title">キャリアや人生の選択に、根拠が生まれる</div>
+          <div class="benefit-desc">自分の軸があれば、転職も独立も、感情ではなく核心から選べるようになります。</div>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-num">05</div>
+        <div>
+          <div class="benefit-title">「人生の地図」という羅針盤を手に入れる</div>
+          <div class="benefit-desc">世界に一つのドキュメント。迷ったときに戻れる、あなただけの人生の地図。</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="details">
-  <div class="details-inner">
-    <div class="eyebrow">PROGRAM DETAILS · 概要</div>
-    <h2 class="sec-title">プログラム詳細</h2>
-    <div class="dtable">
-      <div class="drow"><div class="dkey">料金</div><div class="dval"><span class="pnum">¥88,000</span>（税込）</div></div>
-      <div class="drow"><div class="dkey">内容</div><div class="dval">事前アンケート（44問）＋個別セッション × 4回（各60分）</div></div>
-      <div class="drow"><div class="dkey">成果物</div><div class="dval">志の原稿（PDF）</div></div>
-      <div class="drow"><div class="dkey">形式</div><div class="dval">オンライン（Zoom）· 日程は相談のうえ決定</div></div>
+<!-- VOICE -->
+<section class="sec-gray">
+  <div class="sec-inner">
+    <span class="sec-label">CLIENT VOICE · 受講者の声</span>
+    <div class="divider"></div>
+    <h2 class="sec-title">セッション前と後で、<br><span class="ac">何が変わったか。</span></h2>
+
+    <div style="display:flex;flex-direction:column;gap:20px;margin-bottom:24px;">
+
+      <div style="background:#fff;border-radius:8px;padding:24px 20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px;">
+          <div style="background:var(--bg2);border-radius:4px;padding:14px 14px;">
+            <div style="font-size:9px;letter-spacing:3px;color:var(--text3);margin-bottom:8px;font-weight:500;">BEFORE</div>
+            <div style="font-size:12px;color:var(--text);line-height:1.8;">転職したいけど、何がしたいのかわからなかった。毎日なんとなく過ごしていた。</div>
+          </div>
+          <div style="background:rgba(107,26,42,.06);border-radius:4px;padding:14px 14px;">
+            <div style="font-size:9px;letter-spacing:3px;color:var(--red);margin-bottom:8px;font-weight:500;">AFTER</div>
+            <div style="font-size:12px;color:var(--text);line-height:1.8;">自分が大切にしていることが言語化できた。転職先を選ぶ基準が明確になった。</div>
+          </div>
+        </div>
+        <p style="font-size:14px;color:var(--text);line-height:1.9;margin-bottom:12px;">「自分のことをこんなに深く考えたことがなかった。セッションの後、不思議と気持ちが軽くなりました。」</p>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:20px;height:1px;background:rgba(107,26,42,.25);"></div>
+          <span style="font-size:11px;color:var(--text3);">30代・会社員・男性</span>
+        </div>
+      </div>
+
+      <div style="background:#fff;border-radius:8px;padding:24px 20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px;">
+          <div style="background:var(--bg2);border-radius:4px;padding:14px 14px;">
+            <div style="font-size:9px;letter-spacing:3px;color:var(--text3);margin-bottom:8px;font-weight:500;">BEFORE</div>
+            <div style="font-size:12px;color:var(--text);line-height:1.8;">MBTIを受けたけど「だから何？」という感覚が残っていた。</div>
+          </div>
+          <div style="background:rgba(107,26,42,.06);border-radius:4px;padding:14px 14px;">
+            <div style="font-size:9px;letter-spacing:3px;color:var(--red);margin-bottom:8px;font-weight:500;">AFTER</div>
+            <div style="font-size:12px;color:var(--text);line-height:1.8;">対話の中で自分が気づいていく感覚が全然違った。腑に落ちる言葉が生まれた。</div>
+          </div>
+        </div>
+        <p style="font-size:14px;color:var(--text);line-height:1.9;margin-bottom:12px;">「検査と違って、自分の言葉で語れるようになった気がします。人と話すのが少し楽になりました。」</p>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:20px;height:1px;background:rgba(107,26,42,.25);"></div>
+          <span style="font-size:11px;color:var(--text3);">40代・管理職・女性</span>
+        </div>
+      </div>
+
+      <div style="background:#fff;border-radius:8px;padding:24px 20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px;">
+          <div style="background:var(--bg2);border-radius:4px;padding:14px 14px;">
+            <div style="font-size:9px;letter-spacing:3px;color:var(--text3);margin-bottom:8px;font-weight:500;">BEFORE</div>
+            <div style="font-size:12px;color:var(--text);line-height:1.8;">定年が近づいてきて、これからどう生きるか全く見えなかった。</div>
+          </div>
+          <div style="background:rgba(107,26,42,.06);border-radius:4px;padding:14px 14px;">
+            <div style="font-size:9px;letter-spacing:3px;color:var(--red);margin-bottom:8px;font-weight:500;">AFTER</div>
+            <div style="font-size:12px;color:var(--text);line-height:1.8;">年齢は関係ないと実感。今からでも「自分の軸」を持てることがわかった。</div>
+          </div>
+        </div>
+        <p style="font-size:14px;color:var(--text);line-height:1.9;margin-bottom:12px;">「こんな年齢でも変われるんだと思えた。セッション後、家族との会話が変わってきた気がします。」</p>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:20px;height:1px;background:rgba(107,26,42,.25);"></div>
+          <span style="font-size:11px;color:var(--text3);">50代・会社員・男性</span>
+        </div>
+      </div>
+
+    </div>
+    <p style="font-size:11px;color:var(--text3);text-align:center;line-height:1.8;">※ 上記はモニター受講者の声をもとに作成したサンプルです。<br>実際の受講者の声を順次掲載予定。</p>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section class="sec-gray">
+  <div class="sec-inner">
+    <span class="sec-label">YOUR JOURNEY · この旅の先に</span>
+    <div class="divider"></div>
+    <h2 class="sec-title">まずは無料体験から。<br><span class="ac">自分のペースで深めていける。</span></h2>
+    <div class="steps">
+      <div class="step">
+        <div><div class="step-icon active">0</div></div>
+        <div class="step-body">
+          <span class="step-badge">FREE · 無料</span>
+          <div class="step-title active">体験セッション</div>
+          <div class="step-sub">60分・完全無料・Zoom / Google Meet</div>
+          <div class="step-desc">5問の事前アンケートをもとに対話。セッション後、希望される方にその場で次回日程をご提案します。</div>
+        </div>
+      </div>
+      <div class="step">
+        <div><div class="step-icon inactive">1</div></div>
+        <div class="step-body">
+          <span class="step-badge-gray">RECOMMENDED · 120日</span>
+          <div class="step-title">人生の羅針盤セッション（120日）</div>
+          <div class="step-sub">234問アンケート ＋ セッション×16回（各60分）</div>
+          <div class="step-desc">120日・16回の対話で、「人生の原図」から「人生の羅針盤」まで完成させる。まとめてお申し込みいただくと、最もお得なプランです。</div>
+        </div>
+      </div>
+      <div class="step">
+        <div><div class="step-icon inactive">2</div></div>
+        <div class="step-body">
+          <span class="step-badge-gray">STEP 1 · 30日</span>
+          <div class="step-title">人生の羅針盤セッション（30日）</div>
+          <div class="step-sub">44問アンケート ＋ セッション×4回（各60分）</div>
+          <div class="step-desc">まず30日から始めたい方へ。原体験・強み・動機を掘り下げ、「人生の原図」を手に入れる。※ 修了後に90日追加も可能です。</div>
+        </div>
+      </div>
+      <div class="step">
+        <div><div class="step-icon inactive">3</div></div>
+        <div class="step-body">
+          <span class="step-badge-gray">ONGOING</span>
+          <div class="step-title">継続伴走</div>
+          <div class="step-sub">月1回・90日修了者限定</div>
+          <div class="step-desc">人生の地図は生き続けるもの。変化のたびに更新していく伴走者として関わります。</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="cta-bottom">
+<!-- DETAIL -->
+<section class="sec-white">
+  <div class="sec-inner">
+    <span class="sec-label">FIRST STEP · まず始めるなら</span>
+    <div class="divider"></div>
+    <h2 class="sec-title">無料体験セッション</h2>
+    <span class="free-tag">COMPLETELY FREE</span>
+    <div class="detail-table">
+      <div class="detail-row"><div class="detail-key">料金</div><div class="detail-val">完全無料</div></div>
+      <div class="detail-row"><div class="detail-key">時間</div><div class="detail-val">60分</div></div>
+      <div class="detail-row"><div class="detail-key">形式</div><div class="detail-val">オンライン（Zoom / Google Meet）</div></div>
+      <div class="detail-row"><div class="detail-key">事前準備</div><div class="detail-val">5問のアンケートに回答（申し込み後にお送りします）</div></div>
+      <div class="detail-row"><div class="detail-key">対象</div><div class="detail-val">「本当の自分がわからない」と感じているすべての方（年齢・職業不問）</div></div>
+      <div class="detail-row"><div class="detail-key">次のステップ</div><div class="detail-val">希望される方にその場で次回日程をご提案します</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM PR: 成果物 -->
+<section class="sec-white">
+  <div class="sec-inner">
+    <span class="sec-label">DELIVERABLES · 手に入るもの</span>
+    <div class="divider"></div>
+    <h2 class="sec-title">旅の終わりに、<br><span class="ac">世界に一つの地図が生まれる。</span></h2>
+    <p class="sec-body">セッションの成果物は「資料」ではありません。あなたの内側から掘り起こされた言葉だけで作られた、迷ったときに戻れる羅針盤です。</p>
+
+    <!-- 30日 -->
+    <div style="margin-top:32px;border-radius:8px;overflow:hidden;border:1.5px solid rgba(107,26,42,.2);">
+      <div style="background:var(--red);padding:16px 20px;">
+        <div style="font-size:9px;letter-spacing:3px;color:rgba(245,240,232,.6);margin-bottom:4px;">30-DAY PROGRAM</div>
+        <div style="font-family:'游明朝','Yu Mincho',serif;font-size:20px;font-weight:700;color:white;">人生の原図</div>
+        <div style="font-size:11px;color:rgba(245,240,232,.5);letter-spacing:2px;margin-top:2px;">じんせいのげんず · 6項目</div>
+      </div>
+      <div style="background:white;padding:20px;">
+        <p style="font-size:13px;color:var(--text2);line-height:1.9;margin-bottom:16px;">旅の入口で手にする、世界に一枚だけの自分の地図。輪郭と方位はある。奥地はこれから。</p>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 14px;background:var(--bg);border-radius:6px;"><span style="color:var(--red);font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px;">01</span><span style="font-size:13px;color:var(--text);line-height:1.7;">私を形作った物語</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 14px;background:var(--bg);border-radius:6px;"><span style="color:var(--red);font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px;">02</span><span style="font-size:13px;color:var(--text);line-height:1.7;">固有の能力</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 14px;background:var(--bg);border-radius:6px;"><span style="color:var(--red);font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px;">03</span><span style="font-size:13px;color:var(--text);line-height:1.7;">何が自分を動かすか</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 14px;background:var(--bg);border-radius:6px;"><span style="color:var(--red);font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px;">04</span><span style="font-size:13px;color:var(--text);line-height:1.7;">人との関わり方</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 14px;background:var(--bg);border-radius:6px;"><span style="color:var(--red);font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px;">05</span><span style="font-size:13px;color:var(--text);line-height:1.7;">今の使命（ドラフト）</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 14px;background:var(--bg);border-radius:6px;"><span style="color:var(--red);font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px;">06</span><span style="font-size:13px;color:var(--text);line-height:1.7;">弱点と向き合い方</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 120日 -->
+    <div style="margin-top:20px;border-radius:8px;overflow:hidden;border:1.5px solid rgba(13,27,42,.25);">
+      <div style="background:var(--dark);padding:16px 20px;position:relative;">
+        <div style="position:absolute;top:12px;right:16px;background:var(--gold);color:var(--dark);font-size:9px;font-weight:700;letter-spacing:2px;padding:4px 10px;border-radius:2px;">RECOMMENDED</div>
+        <div style="font-size:9px;letter-spacing:3px;color:rgba(201,168,76,.6);margin-bottom:4px;">120-DAY PROGRAM</div>
+        <div style="font-family:'游明朝','Yu Mincho',serif;font-size:20px;font-weight:700;color:white;">人生の羅針盤</div>
+        <div style="font-size:11px;color:rgba(245,240,232,.35);letter-spacing:2px;margin-top:2px;">じんせいのらしんばん · 12項目</div>
+      </div>
+      <div style="background:white;padding:20px;">
+        <p style="font-size:13px;color:var(--text2);line-height:1.9;margin-bottom:16px;">奥地を旅した者だけが手にできる、完成した自分の地図。迷ったときに戻れる、一生ものの拠り所。</p>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 14px;background:var(--bg);border-radius:6px;"><span style="color:var(--dark);font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px;">01</span><span style="font-size:13px;color:var(--text);line-height:1.7;">私という物語（完成版）</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 14px;background:var(--bg);border-radius:6px;"><span style="color:var(--dark);font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px;">02</span><span style="font-size:13px;color:var(--text);line-height:1.7;">固有の能力（完全版）</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 14px;background:var(--bg);border-radius:6px;"><span style="color:var(--dark);font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px;">03</span><span style="font-size:13px;color:var(--text);line-height:1.7;">何が自分を動かすか（完全版）</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 14px;background:var(--bg);border-radius:6px;"><span style="color:var(--dark);font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px;">04</span><span style="font-size:13px;color:var(--text);line-height:1.7;">命がけで守る価値観</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 14px;background:var(--bg);border-radius:6px;"><span style="color:var(--dark);font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px;">05</span><span style="font-size:13px;color:var(--text);line-height:1.7;">使命（完成版）</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 14px;background:var(--bg);border-radius:6px;"><span style="color:var(--dark);font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px;">06</span><span style="font-size:13px;color:var(--text);line-height:1.7;">どう生きるか（生き方の指針）</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 14px;background:var(--bg);border-radius:6px;"><span style="color:var(--dark);font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px;">07</span><span style="font-size:13px;color:var(--text);line-height:1.7;">自分が最も輝くフィールド</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 14px;background:var(--bg);border-radius:6px;"><span style="color:var(--dark);font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px;">08</span><span style="font-size:13px;color:var(--text);line-height:1.7;">繰り返すパターンと成長の仕方</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 14px;background:var(--bg);border-radius:6px;"><span style="color:var(--dark);font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px;">09</span><span style="font-size:13px;color:var(--text);line-height:1.7;">共に生きる人の定義</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 14px;background:var(--bg);border-radius:6px;"><span style="color:var(--dark);font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px;">10</span><span style="font-size:13px;color:var(--text);line-height:1.7;">親密な関係の設計</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 14px;background:var(--bg);border-radius:6px;"><span style="color:var(--dark);font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px;">11</span><span style="font-size:13px;color:var(--text);line-height:1.7;">AI時代に自分だけが持つ価値</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 14px;background:var(--bg);border-radius:6px;"><span style="color:var(--dark);font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px;">12</span><span style="font-size:13px;color:var(--text);line-height:1.7;">100年後に残すもの</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM PR: ロードマップ -->
+<section class="sec-dark">
+  <div class="sec-inner">
+    <span class="sec-label-light">ROADMAP · 16回の旅</span>
+    <div style="width:40px;height:2px;background:var(--red);margin:0 0 28px;border-radius:1px;"></div>
+    <h2 class="sec-title-light">何をどの順番で<br>掘り下げていくのか。</h2>
+    <p class="sec-body-light" style="margin-bottom:36px;">各セッションには意図があります。順番通りに進むことで、表層から核心へと自然に降りていけます。</p>
+
+    <div style="display:flex;flex-direction:column;gap:0;">
+      <!-- 30日フェーズ -->
+      <div style="background:rgba(107,26,42,.4);border-radius:8px 8px 0 0;padding:12px 18px;">
+        <div style="font-size:9px;letter-spacing:3px;color:rgba(245,240,232,.5);margin-bottom:2px;">PHASE 1 · 30日</div>
+        <div style="font-size:14px;font-weight:600;color:white;font-family:'游明朝','Yu Mincho',serif;">人生の原図を手に入れる</div>
+      </div>
+      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-top:none;border-radius:0;padding:16px 18px;display:flex;flex-direction:column;gap:10px;">
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="width:28px;height:28px;border-radius:50%;background:var(--red);color:white;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;">1</div>
+          <div><div style="font-size:13px;font-weight:600;color:white;margin-bottom:2px;">原体験・物語</div><div style="font-size:12px;color:rgba(245,240,232,.45);line-height:1.6;">あなたを形作った出来事を線でつなぐ</div></div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="width:28px;height:28px;border-radius:50%;background:var(--red);color:white;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;">2</div>
+          <div><div style="font-size:13px;font-weight:600;color:white;margin-bottom:2px;">固有の能力</div><div style="font-size:12px;color:rgba(245,240,232,.45);line-height:1.6;">表の強み・裏の才能・掛け合わせの力</div></div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="width:28px;height:28px;border-radius:50%;background:var(--red);color:white;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;">3</div>
+          <div><div style="font-size:13px;font-weight:600;color:white;margin-bottom:2px;">動機・弱点・使命（ドラフト）</div><div style="font-size:12px;color:rgba(245,240,232,.45);line-height:1.6;">自分を動かすエンジンと、影の自分を知る</div></div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="width:28px;height:28px;border-radius:50%;background:var(--red);color:white;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;">4</div>
+          <div><div style="font-size:13px;font-weight:600;color:white;margin-bottom:2px;">人生の原図・仕上げ</div><div style="font-size:12px;color:rgba(245,240,232,.45);line-height:1.6;">6項目を統合し、自分の現在地を言語化する</div></div>
+        </div>
+      </div>
+
+      <!-- 120日フェーズ -->
+      <div style="background:rgba(201,168,76,.15);border-radius:0;padding:12px 18px;border:1px solid rgba(201,168,76,.15);border-top:none;">
+        <div style="font-size:9px;letter-spacing:3px;color:rgba(201,168,76,.6);margin-bottom:2px;">PHASE 2 · 90日</div>
+        <div style="font-size:14px;font-weight:600;color:white;font-family:'游明朝','Yu Mincho',serif;">人生の羅針盤を完成させる</div>
+      </div>
+      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-top:none;border-radius:0 0 8px 8px;padding:16px 18px;display:flex;flex-direction:column;gap:10px;">
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="width:28px;height:28px;border-radius:50%;background:rgba(201,168,76,.3);border:1px solid var(--gold);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;">5</div>
+          <div><div style="font-size:13px;font-weight:600;color:white;margin-bottom:2px;">ライフライン・痛みの意味化</div><div style="font-size:12px;color:rgba(245,240,232,.45);line-height:1.6;">人生全体を一本の物語として統合する</div></div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="width:28px;height:28px;border-radius:50%;background:rgba(201,168,76,.3);border:1px solid var(--gold);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;">6</div>
+          <div><div style="font-size:13px;font-weight:600;color:white;margin-bottom:2px;">360度フィードバック・感情の傾向</div><div style="font-size:12px;color:rgba(245,240,232,.45);line-height:1.6;">他者の目線と感情の裏側から能力を再定義する</div></div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="width:28px;height:28px;border-radius:50%;background:rgba(201,168,76,.3);border:1px solid var(--gold);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;">7</div>
+          <div><div style="font-size:13px;font-weight:600;color:white;margin-bottom:2px;">価値観・使命（完成版）</div><div style="font-size:12px;color:rgba(245,240,232,.45);line-height:1.6;">命がけで守るものと、血の通った使命文を書く</div></div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="width:28px;height:28px;border-radius:50%;background:rgba(201,168,76,.3);border:1px solid var(--gold);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;">8</div>
+          <div><div style="font-size:13px;font-weight:600;color:white;margin-bottom:2px;">輝くフィールド・成長パターン</div><div style="font-size:12px;color:rgba(245,240,232,.45);line-height:1.6;">最大化する環境と、回復のメカニズムを知る</div></div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="width:28px;height:28px;border-radius:50%;background:rgba(201,168,76,.3);border:1px solid var(--gold);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;">9</div>
+          <div><div style="font-size:13px;font-weight:600;color:white;margin-bottom:2px;">人間関係・パートナーシップ</div><div style="font-size:12px;color:rgba(245,240,232,.45);line-height:1.6;">共に歩む人と、親密な関係の設計図を描く</div></div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="width:28px;height:28px;border-radius:50%;background:rgba(201,168,76,.3);border:1px solid var(--gold);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;">…</div>
+          <div><div style="font-size:13px;font-weight:600;color:white;margin-bottom:2px;">AI時代の価値・レガシー・主人公宣言</div><div style="font-size:12px;color:rgba(245,240,232,.45);line-height:1.6;">100年後に残すものと、人生の主人公として生きる誓い</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM PR: 比較表 -->
+<section class="sec">
+  <div class="sec-inner">
+    <span class="sec-label">PLAN COMPARISON · プラン比較</span>
+    <div class="divider"></div>
+    <h2 class="sec-title">どちらが自分に<br><span class="ac">合っているか。</span></h2>
+
+    <div style="border-radius:8px;overflow:hidden;border:1px solid rgba(0,0,0,.1);margin-top:8px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;">
+        <div style="background:var(--bg2);padding:14px 12px;font-size:11px;color:var(--text3);font-weight:500;"></div>
+        <div style="background:var(--bg2);padding:14px 12px;font-size:11px;color:var(--text2);font-weight:600;text-align:center;border-left:1px solid rgba(0,0,0,.07);">30日</div>
+        <div style="background:var(--dark);padding:14px 12px;font-size:11px;color:var(--gold);font-weight:600;text-align:center;border-left:1px solid rgba(0,0,0,.1);">120日</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid rgba(0,0,0,.07);">
+        <div style="padding:14px 12px;font-size:12px;color:var(--text2);background:white;">セッション数</div>
+        <div style="padding:14px 12px;font-size:12px;color:var(--text);background:var(--bg);text-align:center;border-left:1px solid rgba(0,0,0,.07);">4回</div>
+        <div style="padding:14px 12px;font-size:12px;color:white;background:#162330;text-align:center;border-left:1px solid rgba(255,255,255,.05);">16回</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid rgba(0,0,0,.07);">
+        <div style="padding:14px 12px;font-size:12px;color:var(--text2);background:white;">成果物</div>
+        <div style="padding:14px 12px;font-size:12px;color:var(--text);background:var(--bg);text-align:center;border-left:1px solid rgba(0,0,0,.07);">6項目</div>
+        <div style="padding:14px 12px;font-size:12px;color:white;background:#162330;text-align:center;border-left:1px solid rgba(255,255,255,.05);">12項目</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid rgba(0,0,0,.07);">
+        <div style="padding:14px 12px;font-size:12px;color:var(--text2);background:white;">アンケート</div>
+        <div style="padding:14px 12px;font-size:12px;color:var(--text);background:var(--bg);text-align:center;border-left:1px solid rgba(0,0,0,.07);">44問</div>
+        <div style="padding:14px 12px;font-size:12px;color:white;background:#162330;text-align:center;border-left:1px solid rgba(255,255,255,.05);">234問</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid rgba(0,0,0,.07);">
+        <div style="padding:14px 12px;font-size:12px;color:var(--text2);background:white;">使命の言語化</div>
+        <div style="padding:14px 12px;font-size:12px;color:var(--text);background:var(--bg);text-align:center;border-left:1px solid rgba(0,0,0,.07);">ドラフト</div>
+        <div style="padding:14px 12px;font-size:12px;color:var(--gold);background:#162330;text-align:center;border-left:1px solid rgba(255,255,255,.05);font-weight:600;">完成版</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid rgba(0,0,0,.07);">
+        <div style="padding:14px 12px;font-size:12px;color:var(--text2);background:white;">向いている人</div>
+        <div style="padding:14px 12px;font-size:12px;color:var(--text);background:var(--bg);border-left:1px solid rgba(0,0,0,.07);line-height:1.7;">まず自分の輪郭を知りたい方</div>
+        <div style="padding:14px 12px;font-size:12px;color:white;background:#162330;border-left:1px solid rgba(255,255,255,.05);line-height:1.7;">人生の羅針盤を完成させたい方</div>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--text3);text-align:center;margin-top:16px;line-height:1.8;">※ 料金・お申し込み方法は体験セッション後にご案内します。</p>
+  </div>
+</section>
+
+<!-- PROGRAM PR: ビフォーアフター -->
+<section class="sec-gray">
+  <div class="sec-inner">
+    <span class="sec-label">TRANSFORMATION · 変化の実例</span>
+    <div class="divider"></div>
+    <h2 class="sec-title">プログラムを終えた人は、<br><span class="ac">何が変わったか。</span></h2>
+
+    <div style="display:flex;flex-direction:column;gap:20px;">
+      <div style="background:white;border-radius:8px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+        <div style="font-size:9px;letter-spacing:3px;color:var(--red);margin-bottom:12px;font-weight:500;">30日プログラム修了</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;">
+          <div style="background:var(--bg2);border-radius:4px;padding:12px;">
+            <div style="font-size:9px;letter-spacing:2px;color:var(--text3);margin-bottom:6px;">BEFORE</div>
+            <div style="font-size:12px;color:var(--text);line-height:1.8;">自分の強みを聞かれると「特にないです」と答えていた。</div>
+          </div>
+          <div style="background:rgba(107,26,42,.06);border-radius:4px;padding:12px;">
+            <div style="font-size:9px;letter-spacing:2px;color:var(--red);margin-bottom:6px;">AFTER</div>
+            <div style="font-size:12px;color:var(--text);line-height:1.8;">原体験から導かれた「自分だけの能力」を言葉にできるようになった。</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:20px;height:1px;background:rgba(107,26,42,.25);"></div>
+          <span style="font-size:11px;color:var(--text3);">30代・会社員・女性</span>
+        </div>
+      </div>
+
+      <div style="background:white;border-radius:8px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+        <div style="font-size:9px;letter-spacing:3px;color:var(--dark);margin-bottom:12px;font-weight:500;">120日プログラム修了</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;">
+          <div style="background:var(--bg2);border-radius:4px;padding:12px;">
+            <div style="font-size:9px;letter-spacing:2px;color:var(--text3);margin-bottom:6px;">BEFORE</div>
+            <div style="font-size:12px;color:var(--text);line-height:1.8;">転職を繰り返していたが、何が自分に合うのかわからなかった。</div>
+          </div>
+          <div style="background:rgba(13,27,42,.05);border-radius:4px;padding:12px;">
+            <div style="font-size:9px;letter-spacing:2px;color:var(--dark);margin-bottom:6px;">AFTER</div>
+            <div style="font-size:12px;color:var(--text);line-height:1.8;">使命と価値観が言語化でき、次の選択に根拠が生まれた。迷わなくなった。</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:20px;height:1px;background:rgba(13,27,42,.25);"></div>
+          <span style="font-size:11px;color:var(--text3);">40代・管理職・男性</span>
+        </div>
+      </div>
+
+      <div style="background:white;border-radius:8px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+        <div style="font-size:9px;letter-spacing:3px;color:var(--dark);margin-bottom:12px;font-weight:500;">120日プログラム修了</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;">
+          <div style="background:var(--bg2);border-radius:4px;padding:12px;">
+            <div style="font-size:9px;letter-spacing:2px;color:var(--text3);margin-bottom:6px;">BEFORE</div>
+            <div style="font-size:12px;color:var(--text);line-height:1.8;">人間関係がうまくいかない理由がわからず、同じ失敗を繰り返していた。</div>
+          </div>
+          <div style="background:rgba(13,27,42,.05);border-radius:4px;padding:12px;">
+            <div style="font-size:9px;letter-spacing:2px;color:var(--dark);margin-bottom:6px;">AFTER</div>
+            <div style="font-size:12px;color:var(--text);line-height:1.8;">自分のパターンが見えたことで、相手への理解が深まり関係が変わり始めた。</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:20px;height:1px;background:rgba(13,27,42,.25);"></div>
+          <span style="font-size:11px;color:var(--text3);">50代・経営者・男性</span>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:11px;color:var(--text3);text-align:center;margin-top:16px;line-height:1.8;">※ モニター受講者の声をもとに作成したサンプルです。実際の声を順次掲載予定。</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec">
   <div class="cta-inner">
-    <div class="cta-ey">T A K E &nbsp; T H E &nbsp; F I R S T &nbsp; S T E P</div>
-    <h2 class="cta-title">あなたの志は、<br>消えたのではありません。<br><span class="ac">まだ、眠っているだけです。</span></h2>
+    <span class="sec-label-light">TAKE THE FIRST STEP</span>
+    <h2 class="cta-title">
+      本当の自分は、<br>
+      消えたのではありません。<br>
+      <span class="ac">まだ、言葉になっていないだけです。</span>
+    </h2>
     <div class="cta-rule"></div>
-    <p class="cta-sub">アンケートに答えることが、旅の始まりです。<br>正解はありません。<br>あなたの言葉だけが、本当の志を作ります。</p>
-    <a href="signup.html" class="hero-cta" target="_blank" style="margin:0 auto;display:inline-flex;">お申し込みはこちら <span class="arrow">→</span></a>
-    <p class="hero-note" style="margin-top:20px;color:rgba(245,240,232,.3);">規約確認 → お支払い → アンケートの順に進みます</p>
-    <div class="cta-sub-wrap">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdyRjyj4UzUASVXWv1gbf_E6e3a8X7_Z_7TfgLawt50jN4dbw/viewform" class="cta-sub-link" target="_blank">まずは無料で30分、話を聞いてみる →</a>
-    </div>
+    <p class="cta-sub">正解はありません。あなたの言葉だけが、あなたの人生の羅針盤を作ります。</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfvk1yMAFq2wzViMnwLHel_HkCf9TQAsS44OxAqM1Rv-3u0IQ/viewform" class="cta-btn" target="_blank">
+      無料で自分を知る旅を始める →
+    </a>
+    <p class="price-note">料金・プログラム詳細は、体験セッション後にご案内します。</p>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-logo">H E R O Z &nbsp; V I S I O N</div>
-  <div class="footer-tag">縁ある人の志を見出し、豊かな社会を共創する。</div>
+  <div class="footer-tag">縁ある人の本当の自分を見出し、豊かな社会を共創する。</div>
+  <div class="footer-links">
+    <label class="footer-link" for="toggle-tokusho">特定商取引法に基づく表記</label>
+    <label class="footer-link" for="toggle-terms">利用規約</label>
+    <label class="footer-link" for="toggle-privacy">プライバシーポリシー</label>
+  </div>
   <div class="footer-copy">© 2026 HEROZ VISION</div>
 </footer>
 
-<div class="modal-overlay" id="modal-overlay" onclick="closeModal()"></div>
-
-<div class="legal-modal" id="modal-tokushoho">
-  <div class="modal-inner">
-    <span class="modal-close" onclick="closeModal()">✕ 閉じる</span>
-    <div class="modal-label">LEGAL</div>
+<!-- MODALS -->
+<!-- MODALS: CSS checkbox方式 (JS不要) -->
+<input type="checkbox" class="modal-toggle" id="toggle-tokusho">
+<div class="modal-overlay">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <label class="modal-close-label" for="toggle-tokusho">✕ 閉じる</label>
+    <div class="modal-eyebrow">LEGAL</div>
     <h2 class="modal-title">特定商取引法に基づく表記</h2>
     <div class="modal-date">最終更新：2026年3月1日</div>
     <table class="legal-table">
       <tr><th>販売者名</th><td>HEROZ VISION（谷川 哲也）</td></tr>
-      <tr><th>所在地</th><td>大阪府高槻市津之江町3-60-17</td></tr>
-      <tr><th>電話番号</th><td>090-5966-6635<br><span style="font-size:11px;color:#7A736A;">受付時間：平日10:00〜18:00</span></td></tr>
-      <tr><th>メール</th><td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7a110f161518150f000f3a1d171b131654191517">[email&#160;protected]</a></td></tr>
-      <tr><th>サービス名</th><td>志言語化セッション　志の探求（30日プログラム）</td></tr>
-      <tr><th>販売価格</th><td>88,000円（税込）</td></tr>
-      <tr><th>支払い方法</th><td>クレジットカード（Visa・Mastercard・American Express・JCB）</td></tr>
-      <tr><th>支払い時期</th><td>お申し込み時に一括前払い</td></tr>
-      <tr><th>提供時期</th><td>お支払い完了後、1週間以内にご連絡し、日程を調整のうえ開始します。</td></tr>
-      <tr><th>内容</th><td>・事前アンケート（44問）<br>・個別オンラインセッション×4回（各60分・Zoom）<br>・志の原稿（PDF）のお渡し</td></tr>
-      <tr><th>キャンセル</th><td>セッション開始前かつお申し込みから7日以内に限りキャンセルを受け付けます。それ以降またはセッション開始後は返金できません。キャンセルご希望の場合は <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5f342a33303d302a252a1f38323e3633713c3032">[email&#160;protected]</a> までご連絡ください。</td></tr>
-      <tr><th>動作環境</th><td>Zoom（最新バージョン推奨）が使用できる環境が必要です。</td></tr>
+      <tr><th>所在地</th><td>請求があった場合に遅滞なく開示します（メールにてお問い合わせください）</td></tr>
+      <tr><th>電話番号</th><td>090-5966-6635（平日10:00〜18:00）</td></tr>
+      <tr><th>メール</th><td>kulobouzu&#64;gmail.com</td></tr>
+      <tr><th>サービス名</th><td>人生の羅針盤セッション（120日）／ 人生の羅針盤セッション（30日）</td></tr>
+      <tr><th>販売価格</th><td>120日プログラム：388,000円（税込）／ 30日プログラム：88,000円（税込）／ 30日修了後90日追加：328,000円（税込）</td></tr>
+      <tr><th>支払い方法</th><td>銀行振込（お申し込み後にお振込先をご案内します）</td></tr>
+      <tr><th>支払い時期</th><td>お申し込み後7日以内に一括前払い</td></tr>
+      <tr><th>提供時期</th><td>お支払い完了後、1週間以内に日程調整のうえ開始</td></tr>
+      <tr><th>内容</th><td>【120日】事前アンケート（234問）／ 個別オンラインセッション×16回（各60分）／ 人生の羅針盤（PDF）のお渡し。【30日】事前アンケート（44問）／ 個別オンラインセッション×4回（各60分）／ 人生の原図（PDF）のお渡し。</td></tr>
+      <tr><th>キャンセル</th><td>セッション開始前かつ申し込みから7日以内に限り受付。それ以降は返金不可。</td></tr>
     </table>
-    <div class="legal-note">※ 本サービスはオンラインで完結するサービスのため、クーリングオフ制度の適用対象外となります。</div>
+    <div class="legal-note">※ 本サービスはオンライン完結のため、クーリングオフ制度の適用対象外となります。</div>
   </div>
 </div>
 
-<div class="legal-modal" id="modal-terms">
-  <div class="modal-inner">
-    <span class="modal-close" onclick="closeModal()">✕ 閉じる</span>
-    <div class="modal-label">LEGAL</div>
+<input type="checkbox" class="modal-toggle" id="toggle-terms">
+<div class="modal-overlay">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <label class="modal-close-label" for="toggle-terms">✕ 閉じる</label>
+    <div class="modal-eyebrow">LEGAL</div>
     <h2 class="modal-title">利用規約</h2>
     <div class="modal-date">最終更新：2026年3月1日</div>
-    <div class="legal-article"><div class="legal-art-title">第1条（適用）</div><p>本規約は、HEROZ VISIONが提供するキャリアコンサルティングサービスの利用に関する条件を定めるものです。お申し込みをもって本規約に同意いただいたものとみなします。</p></div>
-    <div class="legal-article"><div class="legal-art-title">第2条（サービス内容）</div><p>事前アンケート（44問）、個別オンラインセッション×4回（各60分）、志の原稿（PDF）のお渡しを提供します。</p></div>
-    <div class="legal-article"><div class="legal-art-title">第3条（料金・支払い）</div><p>料金は88,000円（税込）です。お申し込み時にクレジットカードにて一括前払いとなります。</p></div>
-    <div class="legal-article"><div class="legal-art-title">第4条（キャンセル・返金）</div><p>お申し込みから7日以内かつセッション開始前に限り、キャンセルを受け付けます。セッション開始後のキャンセル・返金はお受けできません。キャンセルご希望の場合は <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3c574950535e534946497c5b515d5550125f5351">[email&#160;protected]</a> までご連絡ください。</p></div>
-    <div class="legal-article"><div class="legal-art-title">第5条（禁止事項）</div><p>セッション内容の無断録音・録画・第三者への共有、提供資料の商業利用・二次配布、当サービスの運営を妨害する行為を禁じます。</p></div>
-    <div class="legal-article"><div class="legal-art-title">第6条（免責事項）</div><p>当サービスは特定の成果（転職・独立・収入向上等）を保証するものではありません。</p></div>
-    <div class="legal-article"><div class="legal-art-title">第7条（準拠法・管轄）</div><p>本規約は日本法に準拠します。紛争が生じた場合は、大阪地方裁判所を第一審の専属的合意管轄裁判所とします。</p></div>
+    <div class="law-art"><div class="law-title">第1条（適用）</div><p class="law-body">本規約は、HEROZ VISIONが提供するすべてのサービス（無料体験セッション・30日プログラム・90日プログラム・継続伴走、以下「本サービス」）の利用に関する条件を定めます。お申し込みをもって同意いただいたものとみなします。</p></div>
+    <div class="law-art"><div class="law-title">第2条（サービス内容）</div><p class="law-body">各プログラムの内容は以下の通りです。①無料体験セッション：事前アンケート（5問）・オンラインセッション1回（60分）。②30日プログラム：事前アンケート（44問）・個別オンラインセッション×4回（各60分）・人生の原図（PDF）のお渡し。③120日プログラム：事前アンケート（234問）・個別オンラインセッション×16回（各60分）・人生の羅針盤（PDF）のお渡し。④30日修了後90日追加：事前アンケート（190問）・個別オンラインセッション×12回（各60分）・人生の羅針盤（PDF）のお渡し。</p></div>
+    <div class="law-art"><div class="law-title">第3条（料金・支払い）</div><p class="law-body">各プログラムの料金は申し込みページに記載の金額（税込）とします。お申し込み後7日以内に銀行振込にて一括前払いとなります。振込先はお申し込み後にご案内します。無料体験セッションは無料です。</p></div>
+    <div class="law-art"><div class="law-title">第4条（キャンセル・返金）</div><p class="law-body">有料プログラムは、申し込みから7日以内かつセッション開始前のみキャンセルを受け付けます。セッション開始後の返金は不可。無料体験セッションはキャンセル・日程変更を随時受け付けます（前日までにご連絡ください）。</p></div>
+    <div class="law-art"><div class="law-title">第5条（禁止事項）</div><p class="law-body">セッションの無断録音・録画・第三者への共有、資料の商業利用・二次配布を禁じます。</p></div>
+    <div class="law-art"><div class="law-title">第6条（免責事項）</div><p class="law-body">本サービスは転職・収入向上・人間関係改善等の特定の成果を保証するものではありません。</p></div>
+    <div class="law-art"><div class="law-title">第7条（準拠法・管轄）</div><p class="law-body">日本法に準拠。紛争の第一審は大阪地方裁判所を専属的合意管轄裁判所とします。</p></div>
   </div>
 </div>
 
-<div class="legal-modal" id="modal-privacy">
-  <div class="modal-inner">
-    <span class="modal-close" onclick="closeModal()">✕ 閉じる</span>
-    <div class="modal-label">LEGAL</div>
+<input type="checkbox" class="modal-toggle" id="toggle-privacy">
+<div class="modal-overlay">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <label class="modal-close-label" for="toggle-privacy">✕ 閉じる</label>
+    <div class="modal-eyebrow">LEGAL</div>
     <h2 class="modal-title">プライバシーポリシー</h2>
     <div class="modal-date">最終更新：2026年3月1日</div>
-    <div class="legal-article"><div class="legal-art-title">取得する情報</div><p>氏名・メールアドレス（お申し込み時）、アンケート回答内容、セッション中の会話内容を取得します。クレジットカード情報は決済代行会社Stripeが管理し、当サービスは保持しません。</p></div>
-    <div class="legal-article"><div class="legal-art-title">利用目的</div><p>取得した情報はサービスの提供・セッションの実施、お問い合わせへの回答、重要なご連絡のみに使用します。お客様の同意なく第三者への提供・販売は一切行いません。</p></div>
-    <div class="legal-article"><div class="legal-art-title">利用する外部サービス</div><p>Stripe（決済）、Googleフォーム／スプレッドシート（アンケート収集）、Zoom（セッション実施）を利用しており、各社のプライバシーポリシーが適用されます。</p></div>
-    <div class="legal-article"><div class="legal-art-title">開示・削除のご請求</div><p>ご自身の個人情報について開示・訂正・削除を請求する権利を有します。<a href="/cdn-cgi/l/email-protection" class
+    <div class="law-art"><div class="law-title">取得する情報</div><p class="law-body">氏名・メールアドレス、アンケート回答内容、セッション中の会話内容。</p></div>
+    <div class="law-art"><div class="law-title">利用目的</div><p class="law-body">サービスの提供・セッション実施・重要なご連絡のみに使用。同意なく第三者への提供・販売は行いません。</p></div>
+    <div class="law-art"><div class="law-title">利用する外部サービス</div><p class="law-body">Googleフォーム（アンケート）、Zoom・Google Meet（セッション）を利用しており、各社のポリシーが適用されます。</p></div>
+    <div class="law-art"><div class="law-title">開示・削除のご請求</div><p class="law-body">kulobouzu&#64;gmail.com までご連絡ください。</p></div>
